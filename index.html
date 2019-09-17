@@ -273,12 +273,14 @@
 
   <div>
       <img src="img/index/map_big.jpg" alt="Карта как добраться" width="1736" height="779">
+      <img src="img/svg-technomart/icon-close.svg" alt="Закрыть окно" width="21" height="21">
   </div>
-
+ 
+  <div><h2 class="visually-hidden">Напишите нам</h2>
   <form class="user" method="post" action="">
     <p>
       <label for="user-login">Ваше имя:</label>
-      <input id="user-login" type="text" name="login" placeholder="Имя Фамилия">
+      <input id="user-login" type="text" name="login" placeholder="Имя Фамилия" autofocus>
     </p>
     <p>
       <label for="user-email">Ваш e-mail:</label>
@@ -286,8 +288,13 @@
     </p>
     <p>
       <label for="user-text">Текст письма:</label>
-      <input id="user-text" type="text" name="text" placeholder="В свободной форме">
+      <textarea id="user-text" name="text" cols="111" rows="6">В свободной форме</textarea>
     </p>
+    <button type="submit">Отправить</button>
   </form>
+
+  <img src="img/svg-technomart/icon-close.svg" alt="Закрыть окно" width="21" height="21">
+
+</div>
 
 </html>
