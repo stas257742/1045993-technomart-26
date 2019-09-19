@@ -3,36 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
    
 
     <header>
-    <section>
-          <img src="img/index/technomart.jpg" alt="Логотип" width="220" height="47">
-      <ul>
+    <div class="header-background">
+    <section class="header-top">
+      <img src="img/index/technomart.jpg" alt="Логотип" width="220" height="47">
+      <ul class="list">
         <li>
-          <img src="img/svg-technomart/icon-search.svg" alt="Поиск" width="17" height="17">
-          <span>Поиск</span>
+          <img class="header-icon" src="img/svg-technomart/icon-search.svg" alt="Поиск" width="17" height="17">
+          <span>Поиск:</span>
         </li>
         <li>
-          <img src="img/svg-technomart/icon-bookmark.svg" alt="Заклдаки" width="14" height="16">
-          <a href="">Закладки</a>
+          <img class="header-icon" src="img/svg-technomart/icon-bookmark.svg" alt="Закладки" width="14" height="16">
+          <a href="">Закладки:</a>
         </li>
         <li>
-          <img src="img/svg-technomart/icon-phone.svg" alt="Корзина" width="15" height="15">
-          <a href="">Корзина</a>
+          <img class="header-icon" src="img/svg-technomart/icon-cart.svg" alt="Корзина" width="15" height="15">
+          <a href="">Корзина:</a>
         </li>
-        <li><a href="">Оформить заказ</a></li>
+        <li>
+          <a href="">Оформить заказ</a>
+        </li>
       </ul>
     </section>
+  </div>
     <section>
       <p>Интернет-магазин
          строительных материалов
          и инструментов для ремонта</p>
       <div>
         <img src="img/svg-technomart/icon-phone.svg" alt="Номер телефона" width="19" height="19">
-        <p>+7 (812) 555-05-55</p>
+        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
       </div>
       <address>г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8</address>
       <img src="img/svg-technomart/icon-login.svg" alt="Войти" width="20" height="17">
@@ -270,7 +277,7 @@
     </footer>
 
   </body>
-
+<!--
   <div>
       <img src="img/index/map_big.jpg" alt="Карта как добраться" width="1736" height="779">
       <button type ="button"><img src="img/svg-technomart/icon-close.svg" alt="Закрыть окно" width="21" height="21"></button>
@@ -288,7 +295,7 @@
     </p>
     <p>
       <label for="user-text">Текст письма:</label>
-      <textarea id="user-text" name="text" cols="111" rows="6">В свободной форме</textarea>
+      <textarea id="user-text" name="text" cols="111" rows="6" placeholder="В свободной форме"></textarea>
     </p>
     <button type="submit">Отправить</button>
   </form>
@@ -296,5 +303,5 @@
   <button type ="button"><img src="img/svg-technomart/icon-close.svg" alt="Закрыть окно" width="21" height="21"></button>
 
 </div>
-
+-->
 </html>
