@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/normalize.css" type="text/css" rel="stylesheet">
   </head>
   <body>
    
-
     <header>
-    <div class="header-background">
+    <div class="header-strip">
     <section class="header-top">
       <img src="img/index/technomart.jpg" alt="Логотип" width="220" height="47">
       <ul class="list">
@@ -30,19 +29,21 @@
       </ul>
     </section>
   </div>
-    <section>
-      <p>Интернет-магазин
-         строительных материалов
-         и инструментов для ремонта</p>
-      <div>
+    <section class="header-medium">
+      <p><em>Интернет-магазин
+         строительных материалов<br>
+         и инструментов для ремонта</em></p>
+      <div class="address">
         <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      </div>
       <address>г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8</address>
-      <a href="">Войти</a>
-      <a href="">Регистрация</a>
+    </div>
+    <div class="button">
+      <a class="button-a" href="">Войти</a>
+      <a class="button-a" href="">Регистрация</a>
+    </div>
     </section>
-      <nav>
-        <ul>
+      <nav class="header-bottom">
+        <ul class="header-bottom-ul">
           <li><a href="">Главная</a></li>
           <li><a href="">Компания</a></li>
           <li><a href="">Каталог</a></li>
@@ -52,14 +53,15 @@
           <li><a href="">Контакты</a></li>
         </ul>
       </nav>
+      <div class="header-strip-bottom"></div>
     </header>
 
 
     <main>
-      <h1 class="visually-hidden">Главная</h1>
+     <!-- <h1 class="visually-hidden">Главная</h1>-->
 
-      <section>
-        <h2 class="visually-hidden">ПРОМО-БЛОК</h2>
+      <section class="promo">
+        <!--<h2 class="visually-hidden">ПРОМО-БЛОК</h2>-->
         <ul>
           <li>
             <h3>Материалы</h3>
@@ -69,10 +71,25 @@
             <h3>Инструмент</h3>
             <a href="">НА ВСЕ СЛУЧАИ</a>
           </li>
+          <article class="slider">
+              <div >
+                <p>ДРЕЛИ</p>
+                <p>Соседям на радость!</p>
+                <img src="/img/index/men_with_perforator.jpg" alt="Перфоратор" width="620" height="266">
+              </div>
+              <!--<div>
+                <p>ПЕРФОРАТОРЫ</p>
+                <p>Настоящие  мужские игрушки</p>
+                <img src="/img/index/men_with_perforator_2.jpg" alt="Перфоратор" width="218" height="170">
+              </div>
+                <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>-->
+            </article>
+          </ul>
+          <ul>
           <li>
             <h3>Техника</h3>
             <a href="">ДЛЯ СТРОЙКИ</a>
-            </li>
+          </li>
           <li>
             <h3>Скидки 50%</h3>
             <a href="">НА 350 ТОВАРОВ</a>
@@ -82,19 +99,7 @@
             <a href="">БЕСПЛАТНО</a>
           </li>
         </ul>
-        <article>
-          <div>
-            <p>ДРЕЛИ</p>
-            <p>Соседям на радость!</p>
-            <img src="/img/index/men_with_perforator.jpg" alt="Перфоратор" width="218" height="170">
-          </div>
-          <div>
-            <p>ПЕРФОРАТОРЫ</p>
-            <p>Настоящие  мужские игрушки</p>
-            <img src="/img/index/men_with_perforator_2.jpg" alt="Перфоратор" width="218" height="170">
-          </div>
-            <a href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-        </article>
+       
       </section>
 
       <section>
