@@ -27,6 +27,22 @@ a {
     color: #ffffff;
     cursor: pointer;
   }
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+  
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
                                                     /*header-top*/
                                                     
 
@@ -43,6 +59,7 @@ header{
 .header-strip {
     width: 100%;
     background-color: #293449;
+    
 }
 .header-top {
     display: flex;
@@ -66,7 +83,8 @@ header{
 }
 
 .list {
-    width: 720px;
+    display: flex;
+    max-width: 720px;
     font-size: 0px;
     list-style: none;
 
@@ -76,65 +94,113 @@ header{
 }
 
 .list li {
-    display: inline-block;
+    display: block;
+    position: relative;
 
-    font-family: "Cuprum", serif;
+    font-family: "Cuprum", "Arial", serif;
     font-size: 17px;
-
+    
     padding-top: 10px;
     padding-bottom: 12px;
 }
 
-.list li:nth-child(1) {
-    width: 285px;
+.list li:nth-child(1) { 
+    width: 240px;
 
     margin-right: 23px;
-    padding-left: 50px;
-
-    background: url(../img/svg-technomart/icon-search.svg) 8% 50% no-repeat;
+    padding-top: 12px;
+    padding-left: 49px;
 }
 
 
 .list li:nth-child(2) {
     width: 130px;
 
-    padding-left: 30px;
-
-    background: url(../img/svg-technomart/icon-bookmark.svg) 0% 45% no-repeat;
+    margin-right: 20px;
+    padding-top: 12px;
+    padding-left: 51px;
 }
+
 .list li:nth-child(3) {
-    width: 130px;
+    width: 140px;
 
-    padding-left: 30px;
+    margin-right: 17px;
+    padding-top: 12px;
 
-    background: url(../img/svg-technomart/icon-cart.svg) 0% 45% no-repeat;
+    padding-left: 57px;
 }
 .list li:nth-child(4) {
     width: 150px;
     text-align: center;
     margin-right: 0px;
+    padding-top: 12px;
+
    
     background-color: #63a63e;
 }
 
+.list li::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    opacity: 0.3;
+}
+
+.list li:nth-child(1)::before {
+    top: 12px;
+    left: 17px;
+    
+    background: url(../img/svg-technomart/icon-search.svg) 0% 0% no-repeat;
+}
+
+.list li:nth-child(2)::before {
+    top: 12px;
+    left: 24px;
+    opacity: 0.3;
+
+    background: url(../img/svg-technomart/icon-bookmark.svg) 0% 0% no-repeat;
+
+}
+
+.list li:nth-child(3)::before {
+    top: 11px;
+    left: 25px;
+    opacity: 0.3;
+
+    background: url(../img/svg-technomart/icon-cart.svg) 0% 45% no-repeat;
+
+}
+
                                                     /*header-top*/
-                                                 /*header-medium*/
-.header-medium,
+                                                 /*header-center*/
+.header-center,
 .header-bottom {
     margin: 0;
     padding: 0;
 }
 
-.header-medium {
-    font-size: 0px;
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     min-height: 180px;
-    padding: 0;
     width: 940px;
+    
     margin: 0 auto;
+    padding: 0;
 }
 
-.header-medium p {
-    display: inline-block;
+.information {
+    display: flex;
+    align-items: flex-start;
+    width: 940px;
+
+    padding: 0;
+}
+
+.header-center p {
+    display: block;
     font-family: "Cuprum", "Arial", serif;
     font-style: italic;
     font-size: 16px;
@@ -142,57 +208,71 @@ header{
 
     width: 200px;
     
-    margin-top: 45px;
-    margin-left:  55px;
-    margin-right: 70px;    
+    margin-top: 49px;
+    margin-right: 69px; 
+    margin-bottom: 0;
+    margin-left: 52px;   
     padding: 0;
     color: #ee3643;
 }
 
-.address {
-    display: inline-block;
-    margin-top: 45px;
-    margin-right: 63px;   
+.contacts {
+    display: block;
+    margin-top: 46px;
+    margin-right: 70px;   
     font-size: 0px;
 
     width: 270px;
 }
 
-.address a {
-    display: inline-block;
+.tel {
+    display: block;
+    position: relative;
     font-family: "Cuprum", "Arial", serif;
     font-size: 21px;
     font-weight: 400;
     line-height: 21px;
+    letter-spacing: 0.15px;
 
-    padding-top: 12px;
+    width: 268px;
+    height: 43px;
+
+    padding-top: 10px;
     padding-bottom: 12px;
-    padding-left: 70px;
-    width: 270px;
+    padding-left: 71px;
 
-    background-image: url(../img/svg-technomart/icon-phone.svg);
-    background-repeat: no-repeat;
-    background-position: 5% 50%;
     border: 2px solid #ffffff;
     color: #ee3643;
 }
 
-.address address {
+.tel::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 11px;
+    left: 13px;
+
+    background-image: url(../img/svg-technomart/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+
+address {
     display: block;
     font-family: "Cuprum", "Arial", serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
     font-style: normal;
     color: #32425c;
+    letter-spacing: 0.18px;
     text-align: center;
-
-    margin: 0 auto;
+    margin-top: 7px;
     padding: 0;    
 }
 
 .button {
-    display: inline-block;
+    display: flex;
     vertical-align: top;
     font-size: 0px;
     
@@ -201,7 +281,7 @@ header{
 }
 
 .button-a {
-    display: inline-block;
+    display: block;
     text-align: center;
 
     font-family: "Cuprum", "Arial", serif;
@@ -215,30 +295,49 @@ header{
 }
 
 .button a:nth-child(1) {
+    position: relative;
     width: 120px;
     height: 45px;
 
+    padding-top: 1px;
+    padding-left: 21px;
+    margin-right: 10px;
+}
+
+.button a:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    top: 15px;
+    left: 13px;
+
     background-image: url(../img/svg-technomart/icon-login.svg);
     background-repeat: no-repeat;
-    background-position: 5% 50%;
-
-    padding: 0;
-    margin-right: 10px;
+    background-position: 0% 0%;
 }
 
 .button a:nth-child(2) {
     width: 150px;
     height: 45px;
 
-    padding: 0;
+    padding-top: 1px;
+    padding-left: 1px;
+
     margin: 0;
 }
-                                                /*header-medium*/
-                                                 /*header-bottom*/
+                                                /*header-center*/
+                                                 /*header-menu*/
 
-.header-bottom-ul {
+.header-menu {
+    width: 940px;
+    height: 55px;
+    margin-top: 39px;
+    margin-bottom: 60px;
+}
+
+.header-menu-list {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -251,31 +350,31 @@ header{
     line-height: 17px;
     font-style: normal;
 
-    padding: 0;
     margin: 0;
-
+    padding: 0;
+    
     background-color: #32425c;
 }
 
-.header-bottom-ul li {
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
+.header-menu-list a{
+    display: block;
 
-.header-bottom-ul li a{
-    padding-top: 15px;
+    padding-top: 20px;
     padding-right: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
 }
 
-.header-strip-bottom {
+.header-menu-list li:nth-child(1) {
+    margin-left: -10px;
+}
+
+.header-menu-strip {
     width: 940px;
     height: 5px;
     background-color: #293449;
 }
-                                                    /*header-bottom*/
+                                                    /*header-menu*/
                                                     /*ПРОМО-БЛОК*/
 
 .promo {
@@ -286,7 +385,7 @@ header{
     height: 410px;
 
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 63px;
     padding: 0;
 }
 
@@ -300,64 +399,147 @@ header{
     padding: 0;
 }
 
+.promo li {
+    display: block;
+    position: relative;
+    height: 123px;
+    width: 300px;
+}
+
+.promo h3 {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #ffffff;
+    margin-top: 21px;
+    margin-left: 23px;
+}
+
 .promo ul:nth-child(1) {
     width: 620px;
+    max-height: 410px;
     margin-right: 20px;
 }
 
 .promo ul:nth-child(2) {
+    flex-direction: column;
+    justify-content: space-between;
     width: 300px;
-}
-
-
-
-.promo ul:nth-child(1) li:nth-child(1) {
-    margin-right: 18px;
-    margin-bottom: 10px;
-}
-.promo ul li {
-    height: 123px;
-    width: 300px;
-
-    margin: 0px;
+    max-height: 410px;
 }
 
 .promo ul:nth-child(1) li:nth-child(1) {
-    background: url(../img/index/new.png) 100% 0% no-repeat,
-                url(../img/svg-technomart/icon-1.svg) 83% 50% no-repeat;
+    background: url(../img/index/new.png) 100% 0% no-repeat;
     background-color: #ffbf47;
+
+    margin-right: 20px;
+    margin-bottom: 19px;
 }
 
 .promo ul:nth-child(1) li:nth-child(2) {
-    background: url(../img/svg-technomart/icon-2.svg) 83% 50% no-repeat;
     background-color: #3bbce3;
 }
 
 .promo ul:nth-child(2) li:nth-child(1) {
-    background: url(../img/svg-technomart/icon-3.svg) 83% 50% no-repeat;
     background-color: #dc91d8;
-
-    margin-bottom: 20px;
-
+    margin-bottom: -2px;
 }
 
 .promo ul:nth-child(2) li:nth-child(2) {
-    background: url(../img/svg-technomart/icon-4.svg) 83% 50% no-repeat;
     background-color: #8ed78f;
+    margin-bottom: -1px;
 
-    margin-bottom: 20px;
 }
 
 .promo ul:nth-child(2) li:nth-child(3) {
-    background: url(../img/svg-technomart/icon-5.svg) 83% 50% no-repeat;
     background-color: #ffc047;
+}
+
+.promo li::before {
+    content: "";
+    position: absolute;
+}
+
+.promo ul:nth-child(1) li:nth-child(1)::before {
+    width: 44px;
+    height: 65px;
+    top: 31px;
+    left: 213px;
+    
+    background: url(../img/svg-technomart/icon-1.svg) 0% 0% no-repeat;
+}
+
+.promo ul:nth-child(1) li:nth-child(2)::before {
+    width: 75px;
+    height: 61px;
+    top: 33px;
+    left: 197px;
+    
+    background: url(../img/svg-technomart/icon-2.svg) 87% 51% no-repeat;
+}
+
+.promo ul:nth-child(2) li:nth-child(1)::before {
+    width: 78px;
+    height: 62px;
+    top: 31px;
+    left: 191px;
+    
+    background: url(../img/svg-technomart/icon-3.svg) 0% 0% no-repeat;
+}
+
+.promo ul:nth-child(2) li:nth-child(2)::before {
+    width: 59px;
+    height: 72px;
+    top: 26px;
+    left: 196px;
+    
+    background: url(../img/svg-technomart/icon-4.svg) 0% 0% no-repeat;
+}
+
+.promo ul:nth-child(2) li:nth-child(3)::before {
+    width: 78px;
+    height: 63px;
+    top: 31px;
+    left: 191px;
+    
+    background: url(../img/svg-technomart/icon-5.svg) 0% 0% no-repeat;
+}
+
+.promo-btn {
+    display: block;
+    position: relative;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+
+    top: -12px;
+    left: 25px;
+
+    width: 135px;
+    height: 38px;    
+}
+
+.promo-btn::after {
+    position: absolute;
+    content: "";
+
+    left: 0px;
+
+    width: 135px;
+    height: 38px;
+
+    background-color: #000000;
+    opacity: 0.1;
 }
 
 .slider {
     width: 620px;
     height: 266px;
-
-    margin-top: 10px;
+    margin: 0;
     padding: 0;
 }
 
