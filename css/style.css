@@ -1,8 +1,4 @@
 
-*, *::before,   *::after {
-    box-sizing: inherit;
-}
-
 html,
 body {
     margin: 0;
@@ -20,6 +16,10 @@ body {
     background-repeat: no-repeat;
 
     box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 a {
@@ -416,20 +416,20 @@ address {
     margin-left: 23px;
 }
 
-.promo ul:nth-child(1) {
+.promo .promo-list-left {
     width: 620px;
     max-height: 410px;
     margin-right: 20px;
 }
 
-.promo ul:nth-child(2) {
+.promo .promo-list-right {
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
     max-height: 410px;
 }
 
-.promo ul:nth-child(1) li:nth-child(1) {
+.promo .promo-list-left li:nth-child(1) {
     background: url(../img/index/new.png) 100% 0% no-repeat;
     background-color: #ffbf47;
 
@@ -437,22 +437,22 @@ address {
     margin-bottom: 19px;
 }
 
-.promo ul:nth-child(1) li:nth-child(2) {
+.promo .promo-list-left li:nth-child(2) {
     background-color: #3bbce3;
 }
 
-.promo ul:nth-child(2) li:nth-child(1) {
+.promo .promo-list-right li:nth-child(1) {
     background-color: #dc91d8;
     margin-bottom: -2px;
 }
 
-.promo ul:nth-child(2) li:nth-child(2) {
+.promo .promo-list-right li:nth-child(2) {
     background-color: #8ed78f;
     margin-bottom: -1px;
 
 }
 
-.promo ul:nth-child(2) li:nth-child(3) {
+.promo .promo-list-right li:nth-child(3) {
     background-color: #ffc047;
 }
 
@@ -461,7 +461,7 @@ address {
     position: absolute;
 }
 
-.promo ul:nth-child(1) li:nth-child(1)::before {
+.promo .promo-list-left li:nth-child(1)::before {
     width: 44px;
     height: 65px;
     top: 31px;
@@ -470,7 +470,7 @@ address {
     background: url(../img/svg-technomart/icon-1.svg) 0% 0% no-repeat;
 }
 
-.promo ul:nth-child(1) li:nth-child(2)::before {
+.promo .promo-list-left li:nth-child(2)::before {
     width: 75px;
     height: 61px;
     top: 33px;
@@ -479,7 +479,7 @@ address {
     background: url(../img/svg-technomart/icon-2.svg) 87% 51% no-repeat;
 }
 
-.promo ul:nth-child(2) li:nth-child(1)::before {
+.promo .promo-list-right li:nth-child(1)::before {
     width: 78px;
     height: 62px;
     top: 31px;
@@ -488,7 +488,7 @@ address {
     background: url(../img/svg-technomart/icon-3.svg) 0% 0% no-repeat;
 }
 
-.promo ul:nth-child(2) li:nth-child(2)::before {
+.promo .promo-list-right li:nth-child(2)::before {
     width: 59px;
     height: 72px;
     top: 26px;
@@ -497,7 +497,7 @@ address {
     background: url(../img/svg-technomart/icon-4.svg) 0% 0% no-repeat;
 }
 
-.promo ul:nth-child(2) li:nth-child(3)::before {
+.promo .promo-list-right li:nth-child(3)::before {
     width: 78px;
     height: 63px;
     top: 31px;
@@ -521,6 +521,11 @@ address {
 
     width: 135px;
     height: 38px;    
+}
+
+.promo-list-right .promo-btn{
+    top: -11px;
+    left: 23px;
 }
 
 .promo-btn::after {
@@ -555,4 +560,212 @@ address {
     z-index: 1;
 
     color: #ffffff;
+}
+
+                                                        /*ПРОМО-БЛОК*/
+                                                        /*popular-goods*/
+
+.popular {
+    width: 940px;
+    height: 430px;
+
+    margin: 0 auto;
+    margin-top: 52px;
+}
+
+.popular-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    height: 90px;
+
+    background-color: #f9f5f0;
+}
+
+.popular-block .popular-title {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #32425c;
+    text-transform: uppercase;
+
+    margin-left: 29px;
+}
+
+.popular-block a {
+    display: block;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 253px;
+    height: 38px;
+
+    margin-right: 24px;
+    margin-bottom: 2px;
+    padding-top: 1px;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.card-products {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 0;
+    margin-bottom: 30px;
+}
+
+.card-product {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+
+    width: 220px;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+}
+
+.card-product .flag {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+
+    width: 60px;
+    height: 60px;
+
+    text-indent: 1000px;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.card-product .flag-new {
+    background: url(../img/index/new.png) no-repeat 0 0;
+}
+
+.card-product:nth-child(4n) {
+    margin-right: 0;
+}
+
+.card-product .actions{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+
+    width: 218px;
+    height: 88px;
+
+    padding: 40px 0;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 10;
+}
+
+.card-product .actions .buy,
+.card-product .actions .bookmark {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+     font-family: "Cuprum", sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 129px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 7px 0;
+
+    background-color: #63a63e;
+
+    border: 3px solid #63a63e;
+    border-radius: 3px;
+    border-bottom-color: #367315;
+}
+
+.card-product .actions .bookmark {
+    color: #32425c;
+    background: white;
+    border-bottom-color: #63a63e;
+}
+
+.card-product:hover .actions {
+    display: block;
+}
+
+.card-product .image {
+    width: 218px;
+    height: 168px;
+}
+
+.card-product .image img {
+    max-width: 100%;
+}
+
+.card-product .title {
+    min-height: 40px;
+
+    padding: 0 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-product .discount {
+    font-size: 16px;
+    min-height: 20px;
+    color: #a9a9a9;
+    text-decoration: line-through; /*продублировал зачёркивание*/
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.discount-hidden {
+    visibility: hidden;
+}
+
+.card-product .price {
+    display: block;
+    position: relative;
+    width: 135px;
+    color: #ffffff;
+
+    margin: 10px auto;
+    margin-bottom: 20px;
+    margin-left: 42px;
+    padding: 9px 30px;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.card-product .price::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -25px;
+
+    width: 0px;
+    height: 0;
+
+    border: 19px solid #ffffff;
+    border-left-color: #ee3643;
+}
+
+.popular .popular-block:nth-child(5) {
+    margin-top: -20px;
+    border: 10px solid #000000;
 }
