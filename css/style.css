@@ -58,8 +58,7 @@ header{
 
 .header-strip {
     width: 100%;
-    background-color: #293449;
-    
+    background-color: #293449; 
 }
 .header-top {
     display: flex;
@@ -271,7 +270,7 @@ address {
     padding: 0;    
 }
 
-.button {
+.buttons {
     display: flex;
     vertical-align: top;
     font-size: 0px;
@@ -294,7 +293,7 @@ address {
     background-color: #ffffff;
 }
 
-.button a:nth-child(1) {
+.buttons a:nth-child(1) {
     position: relative;
     width: 120px;
     height: 45px;
@@ -304,7 +303,7 @@ address {
     margin-right: 10px;
 }
 
-.button a:nth-child(1)::before {
+.buttons a:nth-child(1)::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -317,7 +316,7 @@ address {
     background-position: 0% 0%;
 }
 
-.button a:nth-child(2) {
+.buttons a:nth-child(2) {
     width: 150px;
     height: 45px;
 
@@ -542,11 +541,49 @@ address {
 }
 
 .slider {
+    position: relative;
     width: 620px;
     height: 266px;
     margin: 0;
     padding: 0;
 }
+
+.slider p {
+    position: absolute;
+}
+
+.slider-button-left {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+
+    width: 22px;
+    height: 40px;
+
+    margin-top: -20px;
+
+    background-image: url(../img/svg-technomart/icon-left.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.slider-button-right {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+
+    width: 22px;
+    height: 40px;
+
+    margin-top: -20px;
+
+    background-image: url(../img/svg-technomart/icon-right.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+                                            /*сверстать слайдер*/
 
 .slider p,
 .slider div,
@@ -557,7 +594,6 @@ address {
 
 .slider p {
     position: absolute;
-    z-index: 1;
 
     color: #ffffff;
 }
@@ -620,7 +656,7 @@ address {
     margin: 0 auto;
     margin-top: 20px;
     font-size: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .card-product {
@@ -633,9 +669,7 @@ address {
     text-align: center;
 
     width: 220px;
-
     margin-right: 20px;
-    margin-bottom: 20px;
 
     border: 1px solid #ccc;
 }
@@ -659,6 +693,10 @@ address {
 
 .card-product:nth-child(4n) {
     margin-right: 0;
+}
+
+.card-product:nth-child(5n) {
+    margin-top: 20px;
 }
 
 .card-product .actions{
@@ -764,8 +802,575 @@ address {
     border: 19px solid #ffffff;
     border-left-color: #ee3643;
 }
+                                                        /*popular-goods*/
+                                                        /*popular-manufacturers*/
 
-.popular .popular-block:nth-child(5) {
-    margin-top: -20px;
-    border: 10px solid #000000;
+.popular-block-2 {
+    margin-top: 18px;
+    margin-bottom: 75px;
 }
+
+.popular-manufacturers {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 940p;
+}
+
+.popular-manufacturers a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eaeaea;
+
+    width: 220px;
+    height: 145px;
+
+    margin-top: 18px;
+    margin-right: 20px;
+}
+
+.popular-manufacturers article:nth-child(4n) a{
+    margin-right: 0px;
+}
+                                                        /*popular-manufacturers*/
+                                                        /*service*/
+
+
+.service-strip {
+    width: 100%;
+
+    margin-top: 75px;
+    background-color: #f4f8f9;
+}
+
+.service {
+    width: 940px;
+
+    margin: 0 auto;
+    margin-top: 62px;
+    border-top: 1px solid transparent;
+}
+
+.service-description {
+    margin-top: 63px; 
+}
+
+.service-title {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+.service-description p {
+    width: 400px;
+
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 60px;
+    padding-left: 1px;
+}
+
+.wrapper-for-button-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-buttons {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    width: 240px;
+
+    margin-top: 7px;
+    margin-bottom: 52px;
+}
+
+.service-buttons::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0;
+
+    width: 10px;
+    height: 280px;
+
+    background-image: url(../img/index/line.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    color: #ffffff;
+    font: inherit;
+    font-family: "Cuprum","Arial", serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+    cursor: pointer;
+
+    width: 240px;
+    height: 61px;
+
+    margin: 0;
+    padding-left: 20px;
+    border: 0;
+
+    background-color: #32425c;
+    border: 1px solid #32425c;
+    border-top-color: #405069;
+    border-bottom-color: #293449;
+}
+
+.button-description {
+    display: block;
+    width: 630px;
+    margin-top: 3px;
+    background: url(../img/index/car.png) 100% 110% no-repeat;
+}
+
+.button-description h3 {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #32425c;
+
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.button-description p {
+    margin: 0;
+    margin-top: 25px;
+    margin-right: 344px;
+    margin-left: 10px;
+}
+
+                                                             /*service*/
+                                 /*wrapper-for-advantages and contacts*/
+.advantages-contacts {
+    width: 940px;
+    font-size: 0;
+
+    margin: 0 auto;
+    margin-top: 82px;
+}
+
+.wrapper-for-advantages {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+
+    width: 520px;
+}
+
+.description {
+    margin-top: 25px;
+}
+
+.wrapper-for-advantages p:nth-child(3)  {
+    margin: 0;
+    margin-top: 24px;
+    margin-right: 130px;
+}
+
+.transport-company-list {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    font-weight: 700;
+    list-style: none;
+    line-height: 40px;
+
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 35px;
+    padding: 0;
+}
+
+.transport-company-list li {
+    position: relative;
+}
+.transport-company-list li::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: -35px;
+    width: 25px;
+    height: 2px;
+
+    background-color: #ee3643;
+}
+
+.wrapper-for-contacts {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+
+    width: 302px;
+
+    margin: 0;
+    margin-left: 118px;
+}
+
+.description-2 {
+    margin-right: 120px;
+}
+.map {
+    display: block;
+    margin-top: 31px;
+}
+
+.advantages-button {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    
+    width: 220px;
+    height: 38px;
+
+    margin-top: 27px;
+
+    background-color: #ee3643;
+
+    border-radius: 3px;
+}
+
+.contacts-button {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    
+    width: 300px;
+    height: 38px;
+
+    margin-top: 32px;
+
+    background-color: #ee3643;
+
+    border-radius: 3px;
+}
+
+                                 /*wrapper-for-advantages and contacts*/
+                                 /*footer*/
+                                 /*footer-top*/
+.footer-top-strip p,
+.footer-bottom-strip p,
+.footer-top-strip ul,
+.footer-bottom-strip ul,
+.wrapper-for-address p,
+.wrapper-for-address a
+ {
+    list-style: none;
+    margin: 0;
+}
+
+.footer-top-strip {
+    width: 100%;
+
+    margin-top: 85px;
+
+    background-color: #32425c;
+}  
+
+.footer-bottom-strip {
+    width: 100%;
+    background-color: #293449;
+} 
+
+.footer-top,
+.footer-bottom {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.wrapper-for-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    width: 940px;
+
+    margin-bottom: 27px;
+}
+
+.wrapper-top-menu-list {
+    display: block;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: flex-start;
+   
+    flex-wrap: wrap;
+    width: 548px;
+
+    padding: 0;
+    padding-top: 30px;
+}
+
+.menu-list li {
+    display: inline-block;
+    margin-right: 59px;
+}
+
+.menu-list li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.wrapper-for-top-menu-2 {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+
+    margin-top: 27px;
+    padding-bottom: 50px;
+}
+
+.wrapper-for-address {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    padding-left: 3px;
+}
+
+.menu-list-2 {
+    display: flex;
+
+    width: 525px;
+
+    padding: 0;
+
+}
+
+.menu-list-2 li {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    line-height: 24px;
+
+    margin-right: 60px;
+}
+
+.menu-list-2 li a {
+    color: #ffd180;
+}
+                                                        /*footer-top*/
+                                                        /*footer-bottom*/
+.footer-bottom {
+    display: flex;
+    font: 0;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 16px;
+    color: #ffffff;
+
+    margin: 0 auto;
+}
+
+.wrapper-company-text {
+    display: inline-block;
+    width: 230px;
+
+    margin-top: 36px;
+    margin-bottom: 37px;
+    margin-left: 1px;
+}
+
+.company-text {
+    line-height: 18px;
+}
+
+.wrapper-social {
+    margin-top: 35px;
+    margin-left: 160px;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 132px;
+    padding: 0;
+}
+
+.social li:last-child {
+    margin-right: 0px;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 41px;
+    height: 41px;
+    background-color: #212a3a;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #ee3643;
+}
+
+.wrapper-feedback {   
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 18px;
+    
+    margin-top: 36px;
+    margin-left: 115px;
+}
+
+.wrapper-feedback div:nth-child(1) {
+    margin-right: 52px;
+}
+
+.wrapper-feedback a {
+    color: #ffd180;
+}
+
+                                            /*footer-bottom*/
+                                            /*form*/
+.form {
+    
+    position: relative;
+    width: 620px;
+    
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75); 
+    border-top: 7px solid #ff5257;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 auto;
+}
+.wrapper-login,
+.wrapper-email,
+.wrapper-text {/*все обёртки флексовые*/
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-login {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.wrapper-email {
+    margin-top: 50px;
+    margin-left: 23px;
+}
+
+.wrapper-login input {/*ширина и высота инпутов*/
+    font-family: "PT Sans", "Arial", serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #aaaaaa;
+
+    min-width: 220px;
+    min-height: 38px;
+
+    padding-left: 15px;
+}
+
+.wrapper-email input {/*ширина и высота инпутов*/
+    font-family: "PT Sans", "Arial", serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #aaaaaa;
+
+    min-width: 220px;
+    min-height: 38px;
+
+    padding-left: 15px;
+}
+
+.wrapper-text textarea {/*ширина инпутов*/
+    font-family: "PT Sans", "Arial", serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #aaaaaa;
+
+    max-width: 460px;
+
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+
+.form-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+}
+
+.wrapper-button-send {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    background-color: #f4f4f4;
+}
+
+.button-send {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    width: 460px;
+    min-height: 38px;
+
+    margin-top: 35px;
+    margin-bottom: 35px;
+    background-color: #ee3643;
+    border: none;
+    border-radius: 3px;
+}
+
+
+
