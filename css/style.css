@@ -76,6 +76,22 @@ header{
     font-size: 17px;
     line-height: 18px;
 }
+                        /*Логотип*/
+.wrapper-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 47px;
+    background-color: #ee3643;
+    border-bottom: 5px solid #b52933;
+}
+
+.wrapper-logo:hover,
+.wrapper-logo:active {
+    background-color: #ba2732;
+    border-bottom-color: #9a212a;
+}
 
 .list a {
     color: #ffffff;
@@ -103,39 +119,8 @@ header{
     padding-bottom: 12px;
 }
 
-.list li:nth-child(1) { 
-    width: 240px;
-
-    margin-right: 23px;
-    padding-top: 12px;
-    padding-left: 49px;
-}
-
-
-.list li:nth-child(2) {
-    width: 130px;
-
-    margin-right: 20px;
-    padding-top: 12px;
-    padding-left: 51px;
-}
-
-.list li:nth-child(3) {
-    width: 140px;
-
-    margin-right: 17px;
-    padding-top: 12px;
-
-    padding-left: 57px;
-}
-.list li:nth-child(4) {
-    width: 150px;
-    text-align: center;
-    margin-right: 0px;
-    padding-top: 12px;
-
-   
-    background-color: #63a63e;
+.list li:hover {
+    background-color: #212a3a;
 }
 
 .list li::before {
@@ -146,30 +131,118 @@ header{
     opacity: 0.3;
 }
 
-.list li:nth-child(1)::before {
+.list li:hover::before {
+    opacity: 1;
+}
+
+.list li:nth-child(1) { 
+    width: 270px;
+
+    padding-top: 12px;
+    padding-left: 49px;
+}
+
+.list li:nth-child(1) svg {
+    position: absolute;
     top: 12px;
     left: 17px;
+
+    width: 17px;
+    height: 17px;
     
-    background: url(../img/svg-technomart/icon-search.svg) 0% 0% no-repeat;
+    opacity: 0.3;
+}
+
+.list li:nth-child(1):hover svg {
+    opacity: 1;
+}
+
+.list li:nth-child(1) input {
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 17px;
+    color: #ffffff;
+    
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: #293449;
+}
+
+.list li:nth-child(1):hover input{
+    background-color: #212a3a;
+}
+
+.list li:nth-child(1) input[type="text"]::-webkit-input-placeholder {
+    color: #ffffff;
+   } 
+   
+.list li:nth-child(1) input[type="search"]::-moz-placeholder {
+    color: #ffffff; 
+}
+
+.list li:nth-child(1) input:focus,
+.list li:nth-child(1) input:hover {
+    color: #000000;
+    outline: 0;
+    border: 0;
+}
+
+.list li:nth-child(2) {
+    width: 150px;
+
+    padding-top: 12px;
+    padding-left: 45px;
 }
 
 .list li:nth-child(2)::before {
     top: 12px;
-    left: 24px;
+    left: 17px;
     opacity: 0.3;
 
     background: url(../img/svg-technomart/icon-bookmark.svg) 0% 0% no-repeat;
 
 }
 
+.list li:nth-child(2):active,
+.list li:nth-child(3):active {
+    background-color: #161d29;
+}
+
+.list li:nth-child(3) {
+    width: 150px;
+
+    padding-top: 12px;
+
+    padding-left: 50px;
+}
+
 .list li:nth-child(3)::before {
-    top: 11px;
-    left: 25px;
+    top: 12px;
+    left: 18px;
     opacity: 0.3;
 
-    background: url(../img/svg-technomart/icon-cart.svg) 0% 45% no-repeat;
-
+    background: url(../img/svg-technomart/icon-cart.svg) 0% 0% no-repeat;
 }
+
+.list li:nth-child(4) {
+    width: 150px;
+    text-align: center;
+    margin-right: 0px;
+    padding-top: 11px;
+
+    background-color: #63a63e;
+}
+
+.list li:nth-child(4):hover {
+    color: #000000;
+    background-color: #5fbb2d;
+    opacity: 1;
+}
+
+.list li:nth-child(4):active {
+    background-color: #518534;
+}
+
 
                                                     /*header-top*/
                                                  /*header-center*/
@@ -194,24 +267,22 @@ header{
     display: flex;
     align-items: flex-start;
     width: 940px;
-
-    padding: 0;
 }
 
-.header-center p {
-    display: block;
+.wrapper-shop-description {
+    margin-top: 49px;
+    margin-right: 71px; 
+    margin-bottom: 0;
+    margin-left: 52px;
+}
+.wrapper-shop-description p{
     font-family: "Cuprum", "Arial", serif;
+    font-weight: 400;
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
 
-    width: 200px;
-    
-    margin-top: 49px;
-    margin-right: 69px; 
-    margin-bottom: 0;
-    margin-left: 52px;   
-    padding: 0;
+    margin: 0;
     color: #ee3643;
 }
 
@@ -293,6 +364,14 @@ address {
     background-color: #ffffff;
 }
 
+.button-a:hover {
+    color: #ee3643;
+}
+
+.button-a:active {
+    color: #cacaca;
+}
+
 .buttons a:nth-child(1) {
     position: relative;
     width: 120px;
@@ -358,10 +437,18 @@ address {
 .header-menu-list a{
     display: block;
 
-    padding-top: 20px;
+    padding-top: 17px;
     padding-right: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
+}
+
+.header-menu-list a:hover {
+    background-color: #293449;
+}
+
+.header-menu-list a:active {
+    color: #a8abaf;
 }
 
 .header-menu-list li:nth-child(1) {
@@ -522,6 +609,14 @@ address {
     height: 38px;    
 }
 
+.promo-btn:hover {
+    background-color: #cccccc;
+}
+
+.promo-btn:active {
+    background-color: #b2b2b2;
+}
+
 .promo-list-right .promo-btn{
     top: -11px;
     left: 23px;
@@ -539,7 +634,7 @@ address {
     background-color: #000000;
     opacity: 0.1;
 }
-
+                                         /*слайдер*/
 .slider {
     position: relative;
     width: 620px;
@@ -548,12 +643,7 @@ address {
     padding: 0;
 }
 
-.slider p {
-    position: absolute;
-}
-
 .slider-button-left {
-    content: "";
     position: absolute;
     top: 50%;
     left: 25px;
@@ -566,13 +656,17 @@ address {
     background-image: url(../img/svg-technomart/icon-left.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    z-index: 2;
+
 }
 
 .slider-button-right {
-    content: "";
     position: absolute;
     top: 50%;
-    right: 18px;
+    right: 20px;
 
     width: 22px;
     height: 40px;
@@ -582,22 +676,144 @@ address {
     background-image: url(../img/svg-technomart/icon-right.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    z-index: 2;
 }
-                                            /*сверстать слайдер*/
 
 .slider p,
-.slider div,
 .slider img  {
     margin: 0;
     padding: 0;
 }
+                                       
+.slider input[type="radio"] {
+  display: none;
+}
 
-.slider p {
+.slider-inner {
+  overflow: hidden;
+}
+
+.slider-slides {
+  width: 200%;
+  transition: transform 0.0s ease;
+}
+
+.slider-slides img {
+  float: left;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  text-align: center;
+
+  margin-left: -17px;
+  margin-bottom: 18px;
+  z-index: 1;
+}
+
+.slider-controls label {
+    display: inline-block;
+    margin: 0 3px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #ee3643;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+    
+  background-color: #666666;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides .wrapper-img-2 p:nth-child(1),
+#btn-1:checked ~ .slider-inner .slider-slides .wrapper-img-2 p:nth-child(2) {
+    display: none;
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides .wrapper-img-2 p:nth-child(1),
+#btn-2:checked ~ .slider-inner .slider-slides .wrapper-img-2 p:nth-child(2) {
+    transform: translate(620px);
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-620px);
+}
+                                            
+.wrapper-img,
+.wrapper-img-2 {
+    position: relative;
+}
+
+.wrapper-img p:nth-child(1),
+.wrapper-img-2 p:nth-child(1) {
+    display: block;
     position: absolute;
-
+    top: 23px;
+    left: 25px;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
     color: #ffffff;
 }
 
+.wrapper-img p:nth-child(2),
+.wrapper-img-2 p:nth-child(2) {
+    display: block;
+    position: absolute;
+    top: 61px;
+    left: 25px;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.open-catalog {
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+
+
+    width: 195px;
+    height: 38px;
+
+    padding-top: 11px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    
+    background-color: #ee3643;
+
+    border-radius: 3px;
+}
+
+.open-catalog:hover {
+    background-color: #ca2c37;
+}
+
+.open-catalog:active {
+    background-color: #ba2732;
+}
+                                                        /*слайдер*/
                                                         /*ПРОМО-БЛОК*/
                                                         /*popular-goods*/
 
@@ -738,6 +954,10 @@ address {
     color: #32425c;
     background: white;
     border-bottom-color: #63a63e;
+}
+
+.card-product:hover {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .card-product:hover .actions {
@@ -933,12 +1153,17 @@ address {
 
 .button-description {
     display: block;
+
     width: 630px;
+    min-height: 290px;
+
     margin-top: 3px;
-    background: url(../img/index/car.png) 100% 110% no-repeat;
+    background: url(../img/index/car.png) 100% 100% no-repeat;
+    border: 1px solid #000000;
 }
 
 .button-description h3 {
+    display: block;
     font-family: "Cuprum", "Arial", serif;
     font-size: 36px;
     font-weight: 400;
@@ -965,7 +1190,7 @@ address {
     font-size: 0;
 
     margin: 0 auto;
-    margin-top: 82px;
+    margin-top: 79px;
 }
 
 .wrapper-for-advantages {
@@ -977,7 +1202,7 @@ address {
 }
 
 .description {
-    margin-top: 25px;
+    margin-top: 26px;
 }
 
 .wrapper-for-advantages p:nth-child(3)  {
@@ -1258,7 +1483,7 @@ address {
                                             /*footer-bottom*/
                                             /*form*/
 .form {
-    
+    display: none;
     position: relative;
     width: 620px;
     
@@ -1374,3 +1599,5 @@ address {
 
 
 
+/*не могу разобраться: 1) с полем поиска
+                       2) с кнопкой "Вход"*/
