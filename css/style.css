@@ -806,11 +806,13 @@ address {
     border-radius: 3px;
 }
 
-.open-catalog:hover {
+.open-catalog:hover,
+.all-popular-card-product-btn:hover {
     background-color: #ca2c37;
 }
 
-.open-catalog:active {
+.open-catalog:active,
+.all-popular-card-product-btn:hover:active {
     background-color: #ba2732;
 }
                                                         /*слайдер*/
@@ -890,6 +892,10 @@ address {
     border: 1px solid #ccc;
 }
 
+.card-product:hover {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
 .card-product .flag {
     position: absolute;
     top: -1px;
@@ -935,7 +941,7 @@ address {
     color: #ffffff;
     font-size: 14px;
     font-weight: normal;
-     font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", sans-serif;
     line-height: 18px;
     text-transform: uppercase;
     width: 129px;
@@ -956,8 +962,23 @@ address {
     border-bottom-color: #63a63e;
 }
 
-.card-product:hover {
-    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+.card-product .actions .buy:hover {
+    background-color: #5fbb2d;
+    border: 3px solid #5fbb2d;
+    border-bottom-color: #367315;
+}
+
+.card-product .actions .buy:active {
+    background-color: #518534;
+    border: 3px solid #518534;
+}
+
+.card-product .actions .bookmark:hover {
+    border-color: #32425c;
+}
+
+.card-product .actions .bookmark:active {
+    border-color: #c1c6ce;
 }
 
 .card-product:hover .actions {
@@ -1035,6 +1056,16 @@ address {
     flex-wrap: wrap;
 
     width: 940p;
+}
+
+.popular-manufacturer:hover {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.popular-manufacturer:active {
+    opacity: 0.3;
+    box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+
 }
 
 .popular-manufacturers a {
@@ -1151,6 +1182,16 @@ address {
     border-bottom-color: #293449;
 }
 
+.button-active {
+    background-color: #ffffff;
+    color: #32425c;
+    border-color: #ffffff;
+}
+
+.button:hover {
+    background-color: #293449;
+}
+
 .button-description {
     display: block;
 
@@ -1159,7 +1200,6 @@ address {
 
     margin-top: 3px;
     background: url(../img/index/car.png) 100% 100% no-repeat;
-    border: 1px solid #000000;
 }
 
 .button-description h3 {
@@ -1276,6 +1316,16 @@ address {
     border-radius: 3px;
 }
 
+.advantages-button:hover,
+.contacts-button:hover {
+    background-color: #ca2c37;
+}
+
+.advantages-button:active,
+.contacts-button:active {
+    background-color: #ba2732;
+}
+
 .contacts-button {
     display: block;
     color: #ffffff;
@@ -1361,6 +1411,15 @@ address {
     margin-right: 59px;
 }
 
+.menu-list li a:hover{
+   border-bottom: 1px solid #ffffff;
+}
+
+.menu-list li a:active {
+    opacity: 0.5;
+    border: none;
+}
+
 .menu-list li:nth-child(5n) {
     margin-right: 0;
 }
@@ -1401,6 +1460,15 @@ address {
 
 .menu-list-2 li a {
     color: #ffd180;
+}
+
+.menu-list-2 li a:hover {
+    border-bottom: 1px solid #ffd180;
+}
+
+.menu-list-2 li a:active {
+    opacity: 0.5;
+    border: none;
 }
                                                         /*footer-top*/
                                                         /*footer-bottom*/
@@ -1478,6 +1546,15 @@ address {
 
 .wrapper-feedback a {
     color: #ffd180;
+}
+
+.wrapper-feedback a:hover {
+    border-bottom: 1px solid #ffd180;
+}
+
+.wrapper-feedback a:active {
+    color: #d13644;
+    border: none;
 }
 
                                             /*footer-bottom*/
@@ -1600,4 +1677,6 @@ address {
 
 
 /*не могу разобраться: 1) с полем поиска
-                       2) с кнопкой "Вход"*/
+                       2) с кнопкой "Вход"
+                       3) с кнопками по бокам слайдера в блоке "Промо"
+                       4) оживить слайдер "Доставка", "Гарантия", "Кредит"*/
