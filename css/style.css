@@ -43,6 +43,12 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6, p, ul, li  {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
                                                     /*header-top*/
                                                     
 
@@ -146,6 +152,7 @@ header{
     height: 17px;
     
     opacity: 0.3;
+    
 }
 
 .search:hover svg {
@@ -286,9 +293,7 @@ header{
 }
 
 .wrapper-shop-description {
-    margin-top: 49px;
-    margin-right: 71px; 
-    margin-bottom: 0;
+    margin-top: 49px; 
     margin-left: 52px;
 }
 .wrapper-shop-description p{
@@ -299,16 +304,26 @@ header{
     line-height: 23px;
 
     margin: 0;
+    padding: 0;
     color: #ee3643;
 }
 
 .contacts {
     display: block;
-    margin-top: 46px;
-    margin-right: 70px;   
     font-size: 0px;
+    margin-top: 46px;  
+    margin-left: 72px; 
+    
+    width: 270px;
+}
+
+.catalog-contacts {/*catalod.html*/
+    display: block;
 
     width: 270px;
+
+    margin-top: 48px;
+    margin-left: 72px;   
 }
 
 .tel {
@@ -353,23 +368,47 @@ header{
     color: #32425c;
     letter-spacing: 0.18px;
     text-align: center;
-    margin-top: 7px;
+
+    margin-top: 6px;
     padding: 0;    
 }
 
-.buttons {
-    display: flex;
-    vertical-align: top;
+.catalog-address {/*catalod.html*/
+    display: block;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #32425c;
+    letter-spacing: 0.18px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0;    
+}
+
+.catalog-buttons {/*catalod.html*/
     font-size: 0px;
     
     margin-top: 45px;
+    margin-right: 0px;
+    margin-left: 50px;
     padding: 0;
 }
 
-.button-a,
-.button-enter {
+.buttons {
+    font-size: 0px;
+    
+    margin-top: 45px;
+    margin-right: 0px;
+    margin-left: 69px;
+    padding: 0;
+}
+
+.button-enter,
+.button-a {
     position: relative;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     text-align: center;
 
     font-family: "Cuprum", "Arial", serif;
@@ -402,6 +441,7 @@ header{
 .button-a:active,
 .button-enter:active {
     color: #cacaca;
+    opacity: 0.3;
 }
 
 .button-enter-svg {
@@ -433,17 +473,9 @@ header{
     fill: #32425c;
 }
 
-.button-enter:active {
-    opacity: 0.3;
-}
-
 .button-user {/*catalod.html обнулил отступ справа у ссылки*/
     display: block;
-    text-align: center;
-
-    min-width: 300px;
-    min-height: 45px;
-
+    position: relative;
     font-family: "Cuprum", "Arial", serif;
     font-size: 21px;
     font-weight: 400;
@@ -451,14 +483,67 @@ header{
     font-style: normal;
     color: #000000;
 
-    background-color: #ffffff;
+    min-width: 299px;
+    min-height: 45px;
+
     padding-top: 13px;
-    padding-left: 21px;
-    margin-right: 0px;
+    padding-left: 47px;
+
+    background-color: #ffffff;
 }
 
 .button-user:hover {/*catalod.html*/
     color: #000000;
+}
+
+.icon-user {/*catalod.html*/
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    width: 20px;
+    height: 18px;
+}
+
+.icon-logout {/*catalod.html*/
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+    width: 21px;
+    height: 17px;
+}
+
+.my-orders,
+.personal-area {/*catalod.html*/
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-family: "Cuprum", "Arial", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    font-style: normal;
+    color: #32425c;
+
+    margin-top: 8px;
+
+    text-decoration: underline;
+}
+
+.my-orders {/*catalod.html*/
+    margin-right: 32px;
+    margin-left: 18px;
+}
+
+.my-orders::after {/*catalod.html*/
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -19px;
+
+    border: 2px solid #32425c;
+    border-radius: 50%;
 }
                                                 /*header-center*/
                                                  /*header-menu*/
@@ -467,7 +552,14 @@ header{
     width: 940px;
     height: 55px;
     margin-top: 38px;
-    margin-bottom: 60px;
+    margin-bottom: 66px;
+}
+
+.catalog-header-menu {/*catalod.html*/
+    width: 940px;
+    height: 55px;
+    margin-top: 38px;
+    margin-bottom: 65px;
 }
 
 .header-menu-list {
@@ -516,6 +608,109 @@ header{
     background-color: #293449;
 }
                                                     /*header-menu*/
+                                                    /*main-catalog*/
+.wrapper-breadcrumbs {/*catalog.html*/
+    width: 940px;
+
+    margin: 0 auto;
+}
+
+.breadcrumbs-list {/*catalog.html*/
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 16px;
+    padding-bottom: 17px;
+}
+
+.breadcrumbs-list .list-item {/*catalog.html*/
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;  
+    font-size: 13px;
+}
+
+.list-item a {/*catalog.html*/
+    position: relative;
+    display: block;
+    vertical-align: top;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+
+    padding-top: 5px;
+}
+
+.list-item a::before {/*catalog.html*/
+    content: "";
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: transparent;
+
+    outline: 0;
+    border-right: 1px solid #c5c9d1;
+    border-bottom: 1px solid #c5c9d1;
+    transform: rotate(-45deg);
+}
+
+.list-item:nth-child(1) a {/*catalog.html*/
+    vertical-align: top;
+
+    width: 14px;
+    height: 12px;
+
+    margin-left: -2px;
+    margin-top: 7px;
+    padding-right: 36px;
+
+    background-image: url(../img/svg-technomart/icon-home.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.list-item:nth-child(1) a::before {/*catalog.html*/
+    top: 2px;
+    right: 0px;
+}
+
+.list-item:nth-child(2) a {/*catalog.html*/
+    margin-left: 20px;
+    padding-right: 24px;
+}
+
+.list-item:nth-child(2) a::before {/*catalog.html*/
+    top: 9px;
+    right: 0px;
+}
+
+.list-item:nth-child(3) a{/*catalog.html*/
+    margin-left: 17px;
+    padding-right: 24px;
+}
+
+.list-item:nth-child(3) a::before {/*catalog.html*/
+    top: 9px;
+    right: 0px;
+}
+
+.list-item:nth-child(4) {/*catalog.html*/
+    vertical-align: top;
+
+    margin-top: 2px;
+    margin-left: 18px;
+}
+
+.list-item:nth-child(4) a::before {/*catalog.html*/
+    display: none;
+}
+                                                    /*main-catalog*/
                                                     /*ПРОМО-БЛОК*/
 
 .promo {
@@ -526,7 +721,7 @@ header{
     height: 410px;
 
     margin: 0 auto;
-    margin-top: 63px;
+    margin-top: 60px;
     padding: 0;
 }
 
@@ -885,14 +1080,36 @@ header{
     margin-top: 52px;
 }
 
+
 .popular-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 940px;
-    height: 90px;
 
     background-color: #f9f5f0;
+}
+
+.catalog-popular-block {/*catalog.html*/
+    width: 940px;
+
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: #f2f6f8;
+}
+
+.catalog-popular-title {/*catalog.html*/
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    text-transform: uppercase;
+
+    margin: 0;
+    padding-left: 28px;
 }
 
 .popular-block .popular-title {
@@ -1046,6 +1263,7 @@ header{
 
 .actions .bookmark:active {
     border-color: #c1c6ce;
+    color: #d6d8dc;
 }
 
 .card-product:hover .actions {
@@ -1097,7 +1315,7 @@ header{
     margin: 10px auto;
     margin-bottom: 20px;
     margin-left: 42px;
-    padding: 9px 30px;
+    padding: 10px 30px;
 
     background-color: #ee3643;
     border-radius: 3px;
@@ -1109,13 +1327,73 @@ header{
     top: 0px;
     right: -25px;
 
-    width: 0px;
+    width: 0;
     height: 0;
 
     border: 19px solid #ffffff;
     border-left-color: #ee3643;
 }
                                                         /*popular-goods*/
+                                                        /*filter*/
+
+.wrapper-filter-product-cards {/*catalog.html*/
+    display: flex;
+    width: 940px;
+
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.product-cards {/*catalog.html*/
+    margin-left:  20px;
+}
+
+.wrapper-title {/*catalog.html*/
+    background-color: #f7f3ec;
+}
+
+.wrapper-title .filter-title{/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+
+}
+
+.wrapper-filter-slider {/*catalog.html*/
+    margin-top: 12px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-points {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter-slider {/*catalog.html*/
+    width: 220px;
+    height: 125px;
+
+    margin-top: 15px;
+    margin-bottom: 26px;
+    background-color: #f7f3ec;
+}
+
+.wrapper-filter-manufacturers {/*catalog.html*/
+    margin-top: 16px;
+}
+                                                        /*filter*/
                                                         /*popular-manufacturers*/
 
 .popular-block-2 {
@@ -1260,9 +1538,10 @@ header{
     border: 1px solid #32425c;
     border-top-color: #405069;
     border-bottom-color: #293449;
+    outline: 0;
 }
 
-.button-active {
+.button:focus {
     background-color: #ffffff;
     color: #32425c;
     border-color: #ffffff;
@@ -1775,7 +2054,6 @@ header{
 
 
 
-/*не могу разобраться: 1) с полем поиска
-                       2) с кнопкой "Вход"
-                       3) с кнопками по бокам слайдера в блоке "Промо"
-                       4) оживить слайдер "Доставка", "Гарантия", "Кредит"*/
+/*не могу разобраться: 3) с кнопками по бокам слайдера в блоке "Промо"
+                       4) оживить слайдер "Доставка", "Гарантия", "Кредит"
+                       3) ползунок в фильтре;*/

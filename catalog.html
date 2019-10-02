@@ -12,29 +12,29 @@
 
     <header>
       <div class="header-strip">
-        <section class="header-top">
-          <div class="wrapper-logo">
-            <a href="index.html"><img src="img/index/logo.png" alt="Логотип" width="109" height="18"></a>
-          </div>
-          <ul class="list">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
-              <form>
-                  <input type="text" placeholder="Поиск:">
-              </form>
-            </li>
-            <li>
-              <a href="">Закладки: 0</a>
-            </li>
-            <li>
-              <a href="">Корзина: 0</a>
-            </li>
-            <li>
-              <a href="">Оформить заказ</a>
-            </li>
-          </ul>
-        </section>
-      </div>
+      <section class="header-top">
+        <div class="wrapper-logo">
+          <img src="img/index/logo.png" alt="Логотип" width="109" height="18">
+        </div>
+        <ul class="list">
+          <li class="search">
+            <form>
+                <input type="search" placeholder="Поиск:">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
+            </form>
+          </li>
+          <li>
+            <a href="">Закладки: 0</a>
+          </li>
+          <li>
+            <a href="">Корзина: 0</a>
+          </li>
+          <li>
+            <a href="">Оформить заказ</a>
+          </li>
+        </ul>
+      </section>
+    </div>
       <section class="header-center">
         <div class="information">
           <div class="wrapper-shop-description"> <!--Не получается отступами отрегулировать что бы буква "и" переходила на следующую строчку, и при этом слово "ремонта" оставалось в третьей строчке. Поэтому пришлось использовать три тега "р". Потому что <br> нельзя использовать в этом месте -->
@@ -42,19 +42,21 @@
             <p>строительных материалов</p>
             <p>и инструментов для ремонта</p>
           </div>
-          <div class="contacts">
+          <div class="catalog-contacts">
             <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            <address>г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8</address>
+            <address class="catalog-address">г. Санкт-Петербург, ул. Б. Конюшенная,д.19/8</address>
           </div>
-          <div class="buttons">
+          <div class="catalog-buttons">
             <a class="button-user" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
+              <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
               Равшан Джамшутович
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+              <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
             </a>
+            <a class="my-orders" href="#">Мои заказы</a>
+            <a class="personal-area" href="#">Личный кабинет</a>
           </div>
         </div>
-        <nav class="header-menu">
+        <nav class="catalog-header-menu">
           <ul class="header-menu-list">
             <li><a href="">Главная</a></li>
             <li><a href="">Компания</a></li>
@@ -67,39 +69,35 @@
           <div class="header-menu-strip"></div>
         </nav>
       </section>
-    </header>
-
-
-    <main>
+      </header>
+    
       <h1 class="visually-hidden">Каталог</h1>
-      <ul>
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li>Перфораторы</li>
-      </ul>
-      <div>
-          <h2 >Перфораторы</h2>
-      </div>
-      <div>
-        <h3>СОРТИРОВКА</h3>
-        <ul>
-          <li>ПО ЦЕНЕ</li>
-          <li>ПО ТИПУ</li>
-          <li>ПО ФУНКЦИОНАЛУ</li>
+    <main>
+      <div class="wrapper-breadcrumbs">
+        <ul class="breadcrumbs-list">
+          <li class="list-item"><a href="#"></a></li>
+          <li class="list-item"><a href="#">Каталог</a></li>
+          <li class="list-item"><a href="#">Инструмент</a></li>
+          <li class="list-item">Перфораторы</li>
         </ul>
       </div>
+      <div class="catalog-popular-block">
+          <h2 class="catalog-popular-title">Перфораторы</h2>
+      </div>
 
-      <section>
+      <div class="wrapper-filter-product-cards">
+        <section class="filter">
           <h2 class="visually-hidden">Фильтр</h2>
-          <div>
-            <h3>ФИЛЬТР:</h3>
+          <div class="wrapper-title">
+            <h3 class="filter-title">ФИЛЬТР:</h3>
           </div>
-          <div>
-            <h3>ЦЕНА:</h3>
-            <p>0-30000</p>
+          <div class="wrapper-filter-slider">
+            <h3 class="filter-points">ЦЕНА:</h3>
+            <p class="filter-slider">0-30000</p>
           </div>
-          <h3>Производители</h3>
-          <ul>
+          <div class="wrapper-filter-manufacturers">
+          <h3 class="filter-points">ПРОИЗВОДИТЕЛИ:</h3>
+           <ul>
               <li>BOSCH
               </li>
               <li>ИНТЕРСКОЛ
@@ -110,8 +108,9 @@
               </li>
               <li>HITACHI
               </li>
-          </ul>
-          <h3>ПИТАНИЕ:</h3>
+            </ul>
+          </div>
+          <h3 class="filter-points">ПИТАНИЕ:</h3>
           <ul>
               <li>Аккумуляторные
               </li>
@@ -121,8 +120,16 @@
           <button type="submit">ПОКАЗАТЬ</button>
       </section>
 
-      <section>
+      <section class="product-cards">
           <h2 class="visually-hidden">Карточки товаров</h2>
+          <div>
+              <h3>СОРТИРОВКА</h3>
+              <ul>
+                <li>ПО ЦЕНЕ</li>
+                <li>ПО ТИПУ</li>
+                <li>ПО ФУНКЦИОНАЛУ</li>
+              </ul>
+            </div>
           <article>
               <img src="/img/catalog/catalog_1/perforator_1.jpg" alt="Перфоратор" width="218" height="170">
               <p>Перфоратор BOSCH
@@ -208,7 +215,8 @@
             <a href="">3</a>
             <a href="">Следующая</a>
           </div>
-      </section>
+        </section>
+      </div>
 
       <section> <h2 class="visually-hidden">Описание предназначения перфоратора</h2>
           <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
