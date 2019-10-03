@@ -1714,8 +1714,8 @@ header{
 .sort-line {/*catalog.html*/
     display: flex;
 
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 9px;
+    padding-bottom: 4px;
 
     background-color: #f7f3ec;
     border-radius: 3px;
@@ -1796,11 +1796,24 @@ header{
 }
 
 .wrapper-svg {/*catalog.html*/
-    margin-left: 47px;
+    display: flex;
+    margin-top: 5px;
     margin-right: 15px;
+    margin-left: 47px;
+}
 
-    width: 100px;
-    height: 100px;
+
+#sort-up:checked ~ label[for="sort-up"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/icon-up-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+#sort-down:checked ~ label[for="sort-down"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/icon-down-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .wrapper-svg label:nth-child(3) {/*catalog.html*/
@@ -1812,9 +1825,7 @@ header{
     background-image: url(../img/svg-technomart/icon-up-dir.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-color: #000000;
-    z-index: 5;
-
+    z-index: 100;
 }
 
 .wrapper-svg label:nth-child(4)  {/*catalog.html*/
@@ -1827,22 +1838,7 @@ header{
     background-image: url(../img/svg-technomart/icon-down-dir.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-color: #000000;
-    z-index: 5;
 }
-
-#sort-up:checked ~ label[for="sort-up"] {/*catalog.html*/
-    background-image: url(../img/index/icon-up-dir.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-#sort-down:checked ~ label[for="sort-down"] {/*catalog.html*/
-    background-image: url(../img/index/icon-down-dir.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
 
 
                                                     /*catalog-cards-product*/
@@ -2509,4 +2505,4 @@ header{
 
 /*не могу разобраться: 3) с кнопками по бокам слайдера в блоке "Промо"
                        4) оживить слайдер "Доставка", "Гарантия", "Кредит"
-                       3) ползунок в фильтре;*/
+                       3) красные стрелки;*/
