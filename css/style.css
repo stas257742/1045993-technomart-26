@@ -45,6 +45,7 @@ a {
   }
 
   h1, h2, h3, h4, h5, h6, p, ul, li  {
+      font-weight: 400;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -1350,6 +1351,8 @@ header{
 
 .wrapper-title {/*catalog.html*/
     background-color: #f7f3ec;
+
+    border-radius: 3px;
 }
 
 .wrapper-title .filter-title{/*catalog.html*/
@@ -1360,19 +1363,163 @@ header{
     text-transform: uppercase;
     color: #000000;
 
-    padding-top: 8px;
+    padding-top: 9px;
     padding-bottom: 10px;
     padding-left: 18px;
 
 }
 
 .wrapper-filter-slider {/*catalog.html*/
-    margin-top: 12px;
+    
 
     border-bottom: 1px solid #e5e5e5;
 }
 
-.filter-points {/*catalog.html*/
+                                            /*фильтр изменения цены*/
+.filter-item {/*catalog.html*/
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    padding-bottom: 25px;
+
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.range-filter {/*catalog.html*/
+    width: 220px;
+
+    margin-top: 14px;
+}
+
+.filter-item legend {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+                                             /*Ползунки*/
+.range-controls {/*catalog.html*/
+    position: relative;
+    height: 80px;
+
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-color: #f7f3ec;
+
+    border-radius: 3px;
+}
+
+.range-controls .scale {/*catalog.html*/
+    height: 2px;
+
+    background-color: #d7dcde;
+}
+
+.range-controls .bar {/*catalog.html*/
+    height: 2px;
+    width: 80%;
+
+    background-color: #00ca74;
+}
+
+.range-controls .toggle {/*catalog.html*/
+    position: absolute;
+    top: 30px;
+    left: 0;
+    cursor: pointer;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {/*catalog.html*/
+    left: 20px;
+}
+
+.range-controls .toggle-max {/*catalog.html*/
+    left: 160px;
+}
+                                            /*Ползунки*/
+                                            /*Блоки с ценой*/
+.price-controls {/*catalog.html*/
+    font-size: 0;
+
+    margin-top: 9px;
+}
+                
+.price-controls label {/*catalog.html*/
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+
+    width: 50%;
+}
+
+.price-controls input {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+
+    width: 95px;
+
+    padding-top: 9px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 26px;
+
+    border: none;
+    border-radius: 3px;
+    background: #f7f3ec;
+}
+
+.price-controls .max-price {/*catalog.html*/
+    position: relative;
+    text-align: right;
+}
+
+.price-controls .max-price::before {/*catalog.html*/
+    position: absolute;
+    content: "—";
+    top: 6px;
+    left: -6px;
+
+}
+                                            /*Блоки с ценой*/
+                                            /*Фильтр изменения цены*/
+                                            /*Фильтр выбора производителей*/
+.manufacturers-filter-item {/*catalog.html*/
+    margin: 0;
+    margin-top: 16px;
+    padding: 0;
+    padding-bottom: 25px;
+
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.manufacturers-range-filter {/*catalog.html*/
+    width: 220px;
+
+    margin-top: 14px;
+}
+
+.manufacturers-filter-item legend {/*catalog.html*/
     font-family: "PT Sans", "Arial, sans-serif";
     font-weight: 700;
     font-size: 17px;
@@ -1381,20 +1528,325 @@ header{
     color: #000000;
 }
 
-.filter-slider {/*catalog.html*/
-    width: 220px;
-    height: 125px;
+.manufacturers-list li {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
 
-    margin-top: 15px;
-    margin-bottom: 26px;
-    background-color: #f7f3ec;
+    margin-top: 20px;
+    margin-left: 12px;
 }
 
-.wrapper-filter-manufacturers {/*catalog.html*/
+.manufacturers-list li:nth-child(1) {/*catalog.html*/
+    margin-top: 0px;
+}
+
+.wrapper-input-label {/*catalog.html*/
+    display: flex;
+}
+
+.wrapper-label {/*catalog.html*/
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.wrapper-label label {/*catalog.html*/
+    width: 23px;
+    height: 23px;
+
+    margin: 0;
     margin-top: 16px;
+    padding: 0;
+
+    background-image: url(../img/svg-technomart/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    border: 0;
 }
-                                                        /*filter*/
-                                                        /*popular-manufacturers*/
+
+.wrapper-label label:nth-child(1) {/*catalog.html*/
+    margin-top: 0;
+}
+
+.wrapper-label label:nth-child(4) {/*catalog.html*/
+    margin-top: 17px;
+}
+
+.wrapper-label label:nth-child(5) {/*catalog.html*/
+    margin-top: 17px;
+}
+
+.manufacturers-list-input {/*catalog.html*/
+    display: none;
+}
+
+#input-1:checked ~ .wrapper-label label[for="input-1"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#input-2:checked ~ .wrapper-label label[for="input-2"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#input-3:checked ~ .wrapper-label label[for="input-3"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#input-4:checked ~ .wrapper-label label[for="input-4"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#input-5:checked ~ .wrapper-label label[for="input-5"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+
+                                            /*Фильтр выбора производителей*/
+                                            /*Фильтр типа питания*/
+.food-filter-item {/*catalog.html*/
+    margin: 0;
+    margin-top: 13px;
+    padding: 0;
+    padding-bottom: 25px;
+
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.food-range-filter {/*catalog.html*/
+    width: 220px;
+
+    margin-top: 11px;
+}
+
+.food-filter-item legend {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.wrapper-food-input-label {/*catalog.html*/
+    display: flex;
+}
+
+.wrapper-food-input-label input {/*catalog.html*/
+    display: none;
+}
+
+.wrapper-food-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-food-label label {/*catalog.html*/
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/svg-technomart/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#food-input-1:checked ~ .wrapper-food-label label[for="food-input-1"],
+#food-input-2:checked ~ .wrapper-food-label label[for="food-input-2"] {/*catalog.html*/
+    background-image: url(../img/svg-technomart/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.wrapper-food-label label:nth-child(2) {/*catalog.html*/
+    margin-top: 15px;
+}
+
+.food-list {/*catalog.html*/
+    font-family: "PT Sans", "Arial, sans-serif";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.food-list li:nth-child(2) {/*catalog.html*/
+    margin-top: 20px;
+}
+
+                                            /*Фильтр типа питания*/
+.filter .button-show {/*catalog.html*/
+    margin-top: 50px;
+    margin-left: 0px;
+    padding-top: 12px;
+    padding-right: 39px;
+    padding-bottom: 10px;
+    padding-left: 39px;
+
+    background-color: transparent;
+    border: 0;
+    border: 1px solid #e5e5e5;
+}
+                                                    /*filter*/
+                                                    /*catalog-cards-product*/
+.catalog-cards-product {/*catalog.html*/
+    margin-left: 20px;
+}
+
+.sort-line {/*catalog.html*/
+    display: flex;
+
+    padding-top: 90px;
+    padding-bottom: 40px;
+
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+
+.sort-line h3{/*catalog.html*/
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+
+    padding-left: 19px;
+}
+
+.sort-input {
+    display: none;
+}
+
+.sort-line-list {/*catalog.html*/
+    display: flex;
+    align-items: flex-start;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+
+    margin-left: 140px;
+}
+
+.sort-line-list li {/*catalog.html*/
+    height: 17px;
+    color: #c4c1bb;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    border-bottom: 1px dotted #ee3643;
+}
+
+.sort-line-list li:hover {
+    border-bottom: none;
+}
+
+.sort-line-list label:hover {
+    color: #000000;
+    border-bottom: 1px solid #ee3643;
+}
+
+#sort-price:checked ~ .sort-line-list label[for="sort-price"],
+#sort-price:checked ~ .sort-line-list li:nth-child(1) {/*catalog.html*/
+    color: #ee3643;
+    
+    border-bottom: none;
+}
+
+#sort-type:checked ~ .sort-line-list label[for="sort-type"],
+#sort-type:checked ~ .sort-line-list li:nth-child(2) {/*catalog.html*/
+    color: #ee3643;
+   
+    border-bottom: none;
+}
+
+#sort-functional:checked ~ .sort-line-list label[for="sort-functional"],
+#sort-functional:checked ~ .sort-line-list li:nth-child(3) {/*catalog.html*/
+    color: #ee3643;
+   
+    border-bottom: none;
+}
+
+.sort-line-list li:nth-child(2) {/*catalog.html*/
+    margin-left: 70px;
+}
+
+.sort-line-list li:nth-child(3) {/*catalog.html*/
+    margin-left: 65px;
+}
+
+.wrapper-svg {/*catalog.html*/
+    margin-left: 47px;
+    margin-right: 15px;
+
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper-svg label:nth-child(3) {/*catalog.html*/
+    width: 11px; 
+    height: 10px;
+
+    padding-bottom: 1px;
+
+    background-image: url(../img/svg-technomart/icon-up-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #000000;
+    z-index: 5;
+
+}
+
+.wrapper-svg label:nth-child(4)  {/*catalog.html*/
+    width: 11px; 
+    height: 10px;
+
+    margin-left: 19px;
+    padding-bottom: 1px;
+
+    background-image: url(../img/svg-technomart/icon-down-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #000000;
+    z-index: 5;
+}
+
+#sort-up:checked ~ label[for="sort-up"] {/*catalog.html*/
+    background-image: url(../img/index/icon-up-dir.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+#sort-down:checked ~ label[for="sort-down"] {/*catalog.html*/
+    background-image: url(../img/index/icon-down-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+
+                                                    /*catalog-cards-product*/
+                                                    /*popular-manufacturers*/
 
 .popular-block-2 {
     margin-top: 18px;
@@ -1442,6 +1894,7 @@ header{
     margin-right: 0px;
 }
                                                         /*popular-manufacturers*/
+                                                        
                                                         /*service*/
 
 
