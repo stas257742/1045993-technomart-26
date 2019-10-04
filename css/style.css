@@ -94,6 +94,10 @@ header{
     border-bottom: 5px solid #b52933;
 }
 
+.wrapper-logo img {
+    margin-top: 2px;
+}
+
 .wrapper-logo:hover,
 .wrapper-logo:active {
     background-color: #ba2732;
@@ -171,6 +175,7 @@ header{
     
     margin: 0;
     padding: 0;
+    padding-bottom: 1px;
     padding-left: 48px;
 
     border: none;
@@ -252,7 +257,7 @@ header{
     width: 150px;
     text-align: center;
     margin-right: 0px;
-    padding-top: 11px;
+    padding-top: 12px;
 
     background-color: #63a63e;
 }
@@ -552,7 +557,7 @@ header{
 .header-menu {
     width: 940px;
     height: 55px;
-    margin-top: 38px;
+    margin-top: 39px;
     margin-bottom: 66px;
 }
 
@@ -574,18 +579,18 @@ header{
     list-style: none;
 
     width: 940px;
-    height: 55px;
 
     margin: 0;
     padding: 0;
     
     background-color: #32425c;
+    border-bottom: 5px solid #293449;
 }
 
 .header-menu-list a{
     display: block;
 
-    padding-top: 18px;
+    padding-top: 20px;
     padding-right: 30px;
     padding-bottom: 19px;
     padding-left: 30px;
@@ -603,11 +608,6 @@ header{
     
 }
 
-.header-menu-strip {
-    width: 940px;
-    height: 5px;
-    background-color: #293449;
-}
                                                     /*header-menu*/
                                                     /*main-catalog*/
 .wrapper-breadcrumbs {/*catalog.html*/
@@ -722,7 +722,7 @@ header{
     height: 410px;
 
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 58px;
     padding: 0;
 }
 
@@ -755,27 +755,25 @@ header{
 
 .promo .promo-list-left {
     width: 620px;
-    max-height: 410px;
-    margin-right: 20px;
 }
 
 .promo .promo-list-right {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 300px;
-    max-height: 410px;
+
+    margin-left: 20px
 }
 
 .promo-list-left li:nth-child(1) {
     background: url(../img/index/new.png) 100% 0% no-repeat;
     background-color: #ffbf47;
-
-    margin-right: 20px;
-    margin-bottom: 19px;
 }
 
 .promo-list-left li:nth-child(2) {
     background-color: #3bbce3;
+
+    margin-left: 20px;
 }
 
 .promo-list-right li:nth-child(1) {
@@ -784,12 +782,14 @@ header{
 }
 
 .promo-list-right li:nth-child(2) {
-    background-color: #8ed78f;
-    margin-bottom: -1px;
+    margin-top: 21px;
 
+    background-color: #8ed78f;
 }
 
 .promo-list-right li:nth-child(3) {
+    margin-top: 20px;
+
     background-color: #ffc047;
 }
 
@@ -852,13 +852,13 @@ header{
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
-    top: -11px;
-    left: 26px;
 
     width: 135px;
     height: 38px;  
     
-    padding-top: 10px;
+    margin-top: 12px;
+    margin-left: 25px;
+    padding-top: 11px;
 }
 
 .promo-btn:hover {
@@ -866,7 +866,7 @@ header{
 }
 
 .promo-list-right .promo-btn {
-    left: 24px; 
+    margin-left: 24px;
 }
 
 .promo-btn:active {
@@ -884,6 +884,7 @@ header{
 
     background-color: #000000;
     opacity: 0.1;
+    border-radius: 3px;
 }
                                          /*слайдер*/
 .slider {
@@ -891,6 +892,7 @@ header{
     width: 620px;
     height: 266px;
     margin: 0;
+    margin-top: 17px;
     padding: 0;
 }
 
@@ -1121,7 +1123,9 @@ header{
     color: #32425c;
     text-transform: uppercase;
 
-    margin-left: 29px;
+    margin-left: 28px;
+    padding-top: 30px;
+    padding-bottom: 29px;
 }
 
 .popular-block .all-popular-card-product-btn,
@@ -1146,6 +1150,10 @@ header{
     border-radius: 3px;
 }
 
+.popular-block .all-popular-manufacturers-product-btn {
+    padding-top: 10px;
+}
+
 .all-popular-card-product-btn:hover {
     background-color: #ca2c37;
 }
@@ -1165,7 +1173,7 @@ header{
     position: relative;
     display: inline-block;
     font-size: 18px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     line-height: 20px;
     text-align: center;
@@ -1238,7 +1246,6 @@ header{
     border: 3px solid #63a63e;
     border-radius: 3px;
     border-bottom-color: #367315;
-    z-index: 1;
 }
 
 .actions .bookmark {
@@ -1281,6 +1288,9 @@ header{
 }
 
 .card-product .title {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 20px;
     min-height: 40px;
 
@@ -1298,6 +1308,12 @@ header{
 
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.deleted {
+    padding-left: 5px;
 }
 
 .discount-hidden {
@@ -1343,6 +1359,7 @@ header{
 
     margin: 0 auto;
     margin-top: 20px;
+    padding-bottom: 60px;
 }
 
 .product-cards {/*catalog.html*/
@@ -1715,7 +1732,7 @@ header{
     display: flex;
 
     padding-top: 9px;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
 
     background-color: #f7f3ec;
     border-radius: 3px;
@@ -1842,6 +1859,111 @@ header{
 
 
                                                     /*catalog-cards-product*/
+                                                    /*catalog-wrapper-card-product*/
+.wrapper-card-product {/*catalog.html*/
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 700px;
+}
+
+.wrapper-card-product .card-product {/*catalog.html*/
+    margin-top: 20px;
+    margin-right: 20px; 
+}
+
+.wrapper-card-product .card-product:nth-child(3n) {/*catalog.html*/
+    margin-right: 0;
+}
+
+
+
+
+                                                    /*catalog-wrapper-card-product*/
+                                                    /*page-catalog-input*/
+                                                    
+.wrapper-label-input {/*catalog.html*/
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 52px;
+}
+
+.page-catalog-input,
+.page-catalog-input-next {/*catalog.html*/
+    display: none;
+}
+
+.page-catalog-label {/*catalog.html*/
+    display: inline-block;
+    vertical-align: top;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+
+    width: 38px;
+    height: 38px;
+
+    margin-left: 7px;
+    padding-top: 9px;
+    padding-right: 15px;
+    padding-bottom: 9px;
+    padding-left: 15px;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.wrapper-page-label .page-catalog-label:nth-child(1) {/*catalog.html*/
+    margin-left: 0;
+}
+
+.page-catalog-label-next {/*catalog.html*/
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    margin-left: 6px;
+    padding-top: 9px;
+    padding-right: 30px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+#input-one:checked ~ .wrapper-page-label label[for="input-one"],
+#input-two:checked ~ .wrapper-page-label label[for="input-two"],
+#input-three:checked ~ .wrapper-page-label label[for="input-three"] {/*catalog.html*/
+    background-color: #ee3643;
+    color: #ffffff;
+    border: 1px solid #ee3643
+}
+
+.page-catalog-label:hover,
+.page-catalog-label-next:hover {/*catalog.html*/ 
+    color: #000000;
+    border: 1px solid #bdc6ca;
+}
+
+.page-catalog-label:active,
+.page-catalog-label-next:active {/*catalog.html*/
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ee3643;
+}
+                                                    /*page-catalog-input*/
                                                     /*popular-manufacturers*/
 
 .popular-block-2 {
@@ -1852,6 +1974,7 @@ header{
 .popular-manufacturers {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 
     width: 940p;
 }
@@ -1864,6 +1987,21 @@ header{
     background-color: #ba2732;
 }
 
+
+
+.popular-manufacturer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eaeaea;
+
+    width: 220px;
+    height: 145px;
+
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 .popular-manufacturer:hover {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
@@ -1873,20 +2011,8 @@ header{
     box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-manufacturers a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #eaeaea;
 
-    width: 220px;
-    height: 145px;
-
-    margin-top: 18px;
-    margin-right: 20px;
-}
-
-.last-popular-manufacturer-in-line a{
+.popular-manufacturers a:nth-child(4n) {
     margin-right: 0px;
 }
                                                         /*popular-manufacturers*/
@@ -2173,6 +2299,32 @@ header{
 }
 
                                  /*wrapper-for-advantages and contacts*/
+                                 /*perforator-description*/
+.wrapper-perforator-description {
+    width: 100%;
+
+    background-color: #f2f6f8;
+}
+
+.perforator-description {
+    width: 940px;
+
+    margin: 0 auto;
+    padding-top: 65px;
+    padding-bottom: 69px;
+}
+
+.perforator-description .catalog-popular-title {
+    color: #000000;
+
+
+    padding: 0;
+}
+
+.perforator-description .catalog-popular-description {
+    margin-top: 25px;
+}
+                                 /*perforator-description*/
                                  /*footer*/
                                  /*footer-top*/
 .footer-top-strip p,
@@ -2188,8 +2340,6 @@ header{
 
 .footer-top-strip {
     width: 100%;
-
-    margin-top: 86px;
 
     background-color: #32425c;
 }  
@@ -2500,7 +2650,117 @@ header{
     border: none;
     border-radius: 3px;
 }
+                                                        /*form*/
+                                                        /*popup-basket*/
+.popup-basket {/*catalog.html*/
+    width: 620px;
+    height: 282px;
 
+    margin: 0 auto;
+
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -56px;
+    margin-left: -310px; */
+    
+
+    border-top: 7px solid #ee3643;
+    box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75)
+}
+
+.wrapper-goods-in-basket {/*catalog.html*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Cuprum", "Arial", serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+
+    height: 163px;
+
+    background-color: #ffffff;
+}
+
+.goods-in-buscet-image {
+    margin-left: 80px;
+}
+
+.goods-in-basket {
+    margin-left: 34px;
+    padding-bottom: 1px;
+}
+
+.wrapper-basket-buttons {/*catalog.html*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 112px;
+
+    background-color: #f1f1f1;
+}
+
+.basket-buttons {
+    font-family: "Cuprum", "Arial", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+
+    width: 220px;
+    height: 38px;
+
+    padding-top: 11px;
+    padding-right: 60px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    
+    background-color: #ee3643;
+
+    border-radius: 3px;
+}
+
+.wrapper-basket-buttons .basket-buttons:nth-child(2) {
+    color: #000000;
+
+    margin-left: 20px;
+    padding-top: 11px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-left: 45px;
+
+    background-color: #ffffff;
+
+    outline: 0;
+    border: 0;
+}
+
+.basket-buttons:hover {
+    background-color: #ca2c37;
+}
+
+.basket-buttons:active  {
+    background-color: #ba2732;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 3px;
+
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+}
+
+
+
+                                                        /*popup-basket*/
 
 
 /*не могу разобраться: 3) с кнопками по бокам слайдера в блоке "Промо"
