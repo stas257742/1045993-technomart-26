@@ -85,18 +85,26 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
         -ms-flex-align: center;
             align-items: center;
 
+    min-width: 940px;
+
     padding: 0;
 
     background-color: #f3f7f8;
 }
 
 .header-strip {
+    min-width: 940px; 
     width: 100%;
 
     background-color: #293449;
 }
 
 .header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
     position: relative;
    
     font-family: "Cuprum", "Arial" sans-serif;
@@ -105,8 +113,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     line-height: 18px;
     color: #ffffff;
 
-    max-width: 940px;
-    min-height: 42px;
+    width: 940px;
+    max-height: 42px;
 
     margin: 0 auto;
 }
@@ -116,20 +124,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
                             /*Логотип*/
 
 .wrapper-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: center;
 
-    width: 220px;
+    min-width: 220px;
     height: 47px;
 
     background-color: #ee3643;
@@ -138,9 +135,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .wrapper-logo .wrapper-logo-img {
     width: 109px;
-    height: 19px;
+    min-height: 19px;
 
-    margin-top: 2px;
+    margin-top: 13px;
 }
 
 .wrapper-logo:hover {
@@ -159,14 +156,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     list-style: none;
 
-    max-width: 720px;
+    width: 720px;
+    max-height: 42px;
 
-    margin-left: 220px;
     padding-left: 0;
+
+    background-color: #293449;
 }
 
 .list .header-menu-link,
@@ -1142,7 +1139,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .card-product:nth-child(4n) {
     margin-right: 0;
 }
-.card-product:hover {
+.card-product:hover,
+.card-product:focus {
     -webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
             box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
@@ -1176,7 +1174,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.card-product:hover .actions {
+.card-product:hover .actions,
+.card-product:focus .actions {
     display: block;
 }
 
@@ -1346,28 +1345,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .popular-manufacturers {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-
-    max-width: 940p;
+    font-size: 0;
+    
+    min-width: 940px;
 }
 
 .popular-manufacturer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: inline-block;
+    vertical-align: top;
 
     width: 220px;
     height: 145px;
@@ -1401,6 +1386,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .service-strip {
     width: 100%;
+    min-width: 940px;
+
 
     background-color: #f4f8f9;
 }
@@ -1413,7 +1400,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     border-top: 1px solid transparent;
 }
 
-.service-description {
+.service-description {    
     margin-top: 63px;
 }
 
@@ -1513,7 +1500,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     outline: 0;
 }
 
-.label-input-service-buttons:hover {
+.label-input-service-buttons:hover,
+.label-input-service-buttons:focus {
     background-color: #293449;
 }
 
@@ -1800,15 +1788,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .footer-top-strip {
     width: 100%;
+    min-width: 940px;
 
     background-color: #32425c;
 }
 
 .footer-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    font-size: 0;
+    white-space: nowrap;
 
     min-height: 193px;
     max-width: 940px;
@@ -1817,6 +1804,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .wrapper-for-logo-and-address {
+    display: inline-block;
+    vertical-align: top;
+
     max-width: 330px;
 }
 
@@ -1832,39 +1822,36 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     color:#ffffff;
 
     min-width: 330px;
-    margin-top: 20px;
+    margin-top: 16px;
     padding-left: 3px;
 }
 
 .wrapper-for-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    display: inline-block;
+    vertical-align: top;
+
     max-width: 550px;
 
+    margin-left: 63px;
     padding-bottom: 59px;
 }
 
 .menu-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    font-size: 0;
 
     max-width: 550px;
 
     margin-top: 38px;
-
     padding: 0;
 }
 
 .menu-item {
+    display: inline-block;
+    vertical-align: top;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    display: block;
 
     margin-left: 59px;
 }
@@ -1884,18 +1871,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .menu-items-2 {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    font-size: 0;
     
     max-width: 548px;
     margin-top: 34px;
+    margin-left: 22px;
 
     padding: 0;
 }
 
 .menu-item-2 {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1928,26 +1915,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .footer-bottom-strip {
     width: 100%;
+    min-width: 940px;
+
 
     background-color: #293449;
 }
 
 .footer-bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    font: 0;
+    font-size: 0;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
+    white-space: nowrap;
 
     max-width: 940px;
 
@@ -1956,6 +1936,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .wrapper-company-text {
     display: inline-block;
+    vertical-align: top;
+    white-space: normal;
 
     max-width: 250px;
 
@@ -1966,11 +1948,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .company-text {
     line-height: 18px;
+
+    padding-right: 20px;    
 }
 
 .wrapper-social {
+    display: inline-block;
+    vertical-align: top;
+
     margin-top: 35px;
-    margin-left: 25px;
+    margin-left: 135px;
 }
 
 .social {
@@ -2022,19 +2009,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .wrapper-feedback {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    display: inline-block;
+    vertical-align: top;
+  
     line-height: 18px;
 
     margin-top: 36px;
-    margin-right: 14px;
+    margin-left: 112px;
+}
+
+.feedback-mail {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .wrapper-feedback a {
@@ -2052,7 +2038,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .developed-by {
-    margin-left: 52px;
+    display: inline-block;
+    vertical-align: top;
+
+    margin-left: 48px;
 }
 
 
@@ -3017,6 +3006,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .wrapper-perforator-description { /*catalog.html*/
     width: 100%;
+    min-width: 940px;
 
     background-color: #f2f6f8;
 }
@@ -3051,6 +3041,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 2;
 
     width: 620px;
     min-height: 430px;
@@ -3188,6 +3179,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 2;
+
 
     max-width: 940px;
     height: 446px;
@@ -3371,23 +3364,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 /* переписать все критерии для себя */
 /* автопрефиксер */
 /* сделать критерий д 23 */
-/* сделать всё под перфект */
-/* везде где изображения прописать альтернативный фон */
-/* составить пошаговый план вёрстки сайтов caniuse.com */
-/* выровнять производителей */
-/* подогнать под вс браузеры */
 /* сделать сайт доступным */
 
 /* index.html: */
+/* 1. label на слайдере не нажимается клавишей enter */
  /* 2. Что насчёт авторизованного пользователя и не авторизованного */
+ /* 3. не получается попасть фокусом на "Купить"*/
+ /* 4. При попадании фокусом на "Оформить кредит" всё съезжает */
+/* 6. Правильно ли я сделал надпись в шапке */
 
  /* catalog.html */
  /* 1. Как сделать что бы корзина меняла цвет на красный при добавлении товара; */
-
- /* 1. Делаю разметку блока */
- /* 2. Проверяю на валидность */
- /* 3. Сразу же прописываю все состояния по стаqлгайду */
- /* 4. Везде прописываю альтернативный шрифт */
- /* 5. Везде где изображения происываю фоновое изображение с таким же цветом */
- /* 6. Всегда указываю изображениям размер через стили и в разметке */
- /* 7. Сразу тестирую во всех браузерах */
