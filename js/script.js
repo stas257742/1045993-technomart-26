@@ -28,6 +28,7 @@ close.addEventListener("click", function (evt) {
     }
   })
 })
+
 // Форма обратной связи-скрипт
 
 
@@ -118,3 +119,4 @@ window.addEventListener("keydown", function (evt) { // 9.
     }
   }
 })
+

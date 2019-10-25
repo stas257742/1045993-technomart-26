@@ -133,17 +133,17 @@
             <legend>ПРОИЗВОДИТЕЛИ:</legend>
             <div class="manufacturers-range-filter">
               <div class="wrapper-input-label">
-                <input id="input-1" class="manufacturers-list-input" type="checkbox" name="checkbox">
-                <input id="input-2" class="manufacturers-list-input" type="checkbox" name="checkbox">
-                <input id="input-3" class="manufacturers-list-input" type="checkbox" name="checkbox">
-                <input id="input-4" class="manufacturers-list-input" type="checkbox" name="checkbox">
-                <input id="input-5" class="manufacturers-list-input" type="checkbox" name="checkbox">
+                <input id="input-1" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
+                <input id="input-2" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
+                <input id="input-3" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
+                <input id="input-4" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
+                <input id="input-5" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
                 <div class="wrapper-label">
-                  <label for="input-1" tabindex="0"></label>
-                  <label for="input-2" tabindex="0"></label>
-                  <label for="input-3" tabindex="0"></label>
-                  <label for="input-4" tabindex="0"></label>
-                  <label for="input-5" tabindex="0"></label>
+                  <label for="input-1"></label>
+                  <label for="input-2"></label>
+                  <label for="input-3"></label>
+                  <label for="input-4"></label>
+                  <label for="input-5"></label>
                 </div>
                 <ul class="manufacturers-list">
                   <li>BOSCH</li>
@@ -161,15 +161,15 @@
             <legend>ПИТАНИЕ:</legend>
             <div class="food-range-filter">
               <div class="wrapper-food-input-label">
-                <input id="food-input-1" class="food-list-input" type="radio" name="radio" checked>
-                <input id="food-input-2" class="food-list-input" type="radio" name="radio">
+                <input id="food-input-1" class="food-list-input visually-hidden" type="radio" name="radio" checked>
+                <input id="food-input-2" class="food-list-input visually-hidden" type="radio" name="radio">
                 <div class="wrapper-food-label">
                   <label for="food-input-1"></label>
                   <label for="food-input-2"></label>
                 </div>
                 <ul class="food-list">
-                  <li tabindex="0">Аккумуляторные</li>
-                  <li tabindex="0">Сетевые</li>
+                  <li>Аккумуляторные</li>
+                  <li>Сетевые</li>
                 </ul>
               </div>
             </div>
@@ -178,25 +178,25 @@
         <button class="button-show" type="submit">ПОКАЗАТЬ</button>
       </section>
 
+      <h2 class="visually-hidden">Карточки товаров</h2>
       <section class="catalog-cards-product">
-        <h2 class="visually-hidden">Карточки товаров</h2>
-        <div class="sort-line">
+        <form class="sort-line">
           <h3>СОРТИРОВКА:</h3>
-          <input id="sort-price" class="sort-input" type="radio" name="radio" checked>
-          <input id="sort-type" class="sort-input" type="radio" name="radio">
-          <input id="sort-functional" class="sort-input" type="radio" name="radio">
-          <ul class="sort-line-list">
-            <li><label for="sort-price" tabindex="0">ПО ЦЕНЕ</label></li>
-            <li><label for="sort-type" tabindex="0">ПО ТИПУ</label></li>
-            <li><label for="sort-functional" tabindex="0">ПО ФУНКЦИОНАЛУ</label></li>
-          </ul>
-          <div class="wrapper-svg">
-            <input id="sort-up" class="sort-input" type="radio" name="radio" checked>
-            <input id="sort-down" class="sort-input" type="radio" name="radio">
-            <label for="sort-up" tabindex="0"></label>
-            <label for="sort-down" tabindex="0"></label>
+          <input id="sort-price" class="sort-input visually-hidden" type="radio" name="radio" checked>
+          <input id="sort-type" class="sort-input visually-hidden" type="radio" name="radio">
+          <input id="sort-functional" class="sort-input visually-hidden" type="radio" name="radio">
+          <div class="sort-line-list">
+            <label for="sort-price">ПО ЦЕНЕ</label>
+            <label for="sort-type">ПО ТИПУ</label>
+            <label for="sort-functional">ПО ФУНКЦИОНАЛУ</label>
           </div>
-        </div>
+          <div class="wrapper-svg">
+            <input id="sort-up" class="sort-input visually-hidden" type="radio" name="radio">
+            <input id="sort-down" class="sort-input visually-hidden" type="radio" name="radio">
+            <label for="sort-up"></label>
+            <label for="sort-down"></label>
+          </div>
+        </form>
         <div class="wrapper-card-product">
           <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
@@ -210,7 +210,7 @@
             <div class="discount"><del>22500 Р.</del></div>
             <span class="price">15500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -222,7 +222,7 @@
             <div class="discount"><del>30500 Р.</del></div>
             <span class="price">25500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag flag-new">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -234,7 +234,7 @@
             <div class="discount discount-hidden"><del>30500</del></div>
             <span class="price">12500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -246,7 +246,7 @@
             <div class="discount"><del>22500 Р.</del></div>
             <span class="price">15500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag flag-new">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -258,7 +258,7 @@
             <div class="discount"><del>30500 Р.</del></div>
             <span class="price">25500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -270,7 +270,7 @@
             <div class="discount discount-hidden"><del>30500</del></div>
             <span class="price">12500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag flag-new">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -282,7 +282,7 @@
             <div class="discount"><del>22500 Р.</del></div>
             <span class="price">15500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -294,7 +294,7 @@
             <div class="discount"><del>30500 Р.</del></div>
             <span class="price">25500 Р.</span>
           </article>
-          <article class="card-product">
+          <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
             <div class="actions">
               <a href="buy.html" class="action-btn buy">Купить</a>
@@ -306,22 +306,20 @@
             <span class="discount discount-hidden">30500</span>
             <span class="price">12500 Р.</span>
           </article>
-
-
-          <div>
-            <h3 class="visually-hidden">Кнопки перелистывания страниц</h3>
-            <div class="wrapper-label-input">
-              <input id="input-one" class="page-catalog-input" type="radio" name="radio" checked>
-              <input id="input-two" class="page-catalog-input" type="radio" name="radio">
-              <input id="input-three" class="page-catalog-input" type="radio" name="radio">
-              <input id="input-next" class="page-catalog-input-next" type="radio" name="radio">
+          <h3 class="visually-hidden">Кнопки перелистывания страниц</h3>
+          <div class="wrapper-label-input">
+            <form>
+              <input id="input-one" class="page-catalog-input visually-hidden" type="radio" name="radio" checked>
+              <input id="input-two" class="page-catalog-input visually-hidden" type="radio" name="radio">
+              <input id="input-three" class="page-catalog-input visually-hidden" type="radio" name="radio">
+              <input id="input-next" class="page-catalog-input visually-hidden" type="radio" name="radio">
               <div class="wrapper-page-label">
                 <label class="page-catalog-label" for="input-one">1</label>
                 <label class="page-catalog-label" for="input-two">2</label>
                 <label class="page-catalog-label" for="input-three">3</label>
                 <label class="page-catalog-label-next" for="input-next">Следующая</label>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
