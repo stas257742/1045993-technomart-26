@@ -880,10 +880,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     background-color: transparent;
 }
 
-.slider input[type="radio"] {
-    display: none;
-}
-
 .slider-controls {
     position: absolute;
     bottom: 4px;
@@ -991,6 +987,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     background-color: #ffffff;
 }
 
+#btn-1:focus ~ .slider-controls, 
+#btn-2:focus ~ .slider-controls {
+ outline: 1px solid #0094d2; 
+}
 #btn-1:checked ~ .slider-inner .slider-slides {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
@@ -1345,14 +1345,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .popular-manufacturers {
-    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     
     min-width: 940px;
 }
 
 .popular-manufacturer {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    font-display: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
     width: 220px;
     height: 145px;
@@ -1794,8 +1801,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .footer-top {
-    font-size: 0;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 
     min-height: 193px;
     max-width: 940px;
@@ -1804,8 +1813,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .wrapper-for-logo-and-address {
-    display: inline-block;
-    vertical-align: top;
 
     max-width: 330px;
 }
@@ -1822,13 +1829,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     color:#ffffff;
 
     min-width: 330px;
-    margin-top: 16px;
+    margin-top: 20px;
     padding-left: 3px;
 }
 
 .wrapper-for-menu {
-    display: inline-block;
-    vertical-align: top;
 
     max-width: 550px;
 
@@ -1837,7 +1842,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .menu-items {
-    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
 
     max-width: 550px;
 
@@ -1846,8 +1854,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .menu-item {
-    display: inline-block;
-    vertical-align: top;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1871,7 +1877,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .menu-items-2 {
-    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
     
     max-width: 548px;
     margin-top: 34px;
@@ -1881,8 +1890,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .menu-item-2 {
-    display: inline-block;
-    vertical-align: top;
     font-family: "Cuprum", "Arial", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1922,7 +1929,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .footer-bottom {
-    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -1953,11 +1963,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .wrapper-social {
-    display: inline-block;
-    vertical-align: top;
-
     margin-top: 35px;
-    margin-left: 135px;
+    margin-left: 25px;
 }
 
 .social {
@@ -2009,13 +2016,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .wrapper-feedback {
-    display: inline-block;
-    vertical-align: top;
-  
     line-height: 18px;
 
     margin-top: 36px;
-    margin-left: 112px;
+    margin-right: 14px;
 }
 
 .feedback-mail {
@@ -3367,7 +3371,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 /* сделать сайт доступным */
 
 /* index.html: */
-/* 1. label на слайдере не нажимается клавишей enter */
  /* 2. Что насчёт авторизованного пользователя и не авторизованного */
  /* 3. не получается попасть фокусом на "Купить"*/
  /* 4. При попадании фокусом на "Оформить кредит" всё съезжает */
