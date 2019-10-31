@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext"
+    rel="stylesheet" type="text/css">
   <link href="css/normalize.css" type="text/css" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -14,7 +17,8 @@
     <div class="header-strip">
       <section class="header-top">
         <div class="wrapper-logo">
-          <img class="wrapper-logo-img" src="img/index/logo.png" alt="Техномарт" width="109" height="19">
+          <img class="wrapper-logo-img" src="img/svg-technomart/logo-technomart.svg" alt="Техномарт" width="109"
+            height="19">
         </div>
         <ul class="list">
           <li class="search">
@@ -41,10 +45,9 @@
     <section class="header-center">
       <div class="information">
         <div class="wrapper-shop-description">
-          <!--Не получается отступами отрегулировать что бы буква "и" переходила на следующую строчку, и при этом слово "ремонта" оставалось в третьей строчке. Поэтому пришлось использовать три тега "р". Потому что <br> нельзя использовать в этом месте -->
-          <p>Интернет-магазин</p>
-          <p>строительных материалов</p>
-          <p>и инструментов для ремонта</p>
+          <p>Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта</p>
         </div>
         <div class="contacts">
           <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -90,24 +93,22 @@
           <a class="promo-btn" href="">НА ВСЕ СЛУЧАИ</a>
         </div>
         <article class="slider">
-          <button class="slider-button slider-button-left" type="button" tabindex="-1"></button>
-          <button class="slider-button slider-button-right" type="button" tabindex="-1"></button>
+          <button class="slider-button slider-button-left" type="button" aria-label="Листать баннер влево"></button>
+          <button class="slider-button slider-button-right" type="button" aria-label="Листать баннер вправо"></button>
           <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
           <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
           <div class="slider-controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
+            <label for="btn-1" aria-label="Переключение слайдов"></label>
+            <label for="btn-2" aria-label="Переключение слайдов"></label>
           </div>
-          <div class="slider-inner">
-            <div class="slider-slides">
-              <div class="wrapper-img-1">
-                <p class="paragraph-1">ДРЕЛИ</p>
-                <p class="paragraph-2">Соседям на радость!</p>
-              </div>
-              <div class="wrapper-img-2">
-                <p class="paragraph-1">ПЕРФОРАТОРЫ</p>
-                <p class="paragraph-2">Настоящие мужские игрушки</p>
-              </div>
+          <div class="slider-slides">
+            <div class="wrapper-img-1">
+              <p class="paragraph-1">ДРЕЛИ</p>
+              <p class="paragraph-2">Соседям на радость!</p>
+            </div>
+            <div class="wrapper-img-2">
+              <p class="paragraph-1">ПЕРФОРАТОРЫ</p>
+              <p class="paragraph-2">Настоящие мужские игрушки</p>
             </div>
           </div>
           <a class="open-catalog" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
@@ -131,9 +132,8 @@
     </section>
 
     <section class="popular">
-      <h2 class="visually-hidden">Популярные товары</h2>
       <div class="popular-block">
-        <h3 class="popular-title">ПОПУЛЯРНЫЕ ТОВАРЫ:</h3>
+        <h2 class="popular-title">ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
         <a class="all-popular-card-product-btn" href="">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
       </div>
       <div class="card-products">
@@ -188,10 +188,9 @@
       </div>
     </section>
 
-    <h2 class="visually-hidden">Популярные производители</h2>
     <section class="popular popular-block-2">
       <div class="popular-block">
-        <h3 class="popular-title">популярные производители:</h3>
+        <h2 class="popular-title">Популярные производители:</h2>
         <a class="all-popular-manufacturers-product-btn" href="#">ВСЕ ПРОИЗВОДИТЕЛИ</a>
       </div>
       <div class="popular-manufacturers">
@@ -220,9 +219,9 @@
           </p>
         </div>
         <div class="wrapper-service">
-          <input id="input-slide-1" class="input-service-buttons" type="radio" name="radio" checked>
-          <input id="input-slide-2" class="input-service-buttons" type="radio" name="radio">
-          <input id="input-slide-3" class="input-service-buttons" type="radio" name="radio">
+          <input type="radio" id="input-slide-1" class="input-service-buttons" name="radio" checked>
+          <input type="radio" id="input-slide-2" class="input-service-buttons" name="radio">
+          <input type="radio" id="input-slide-3" class="input-service-buttons" name="radio">
           <div class="service-buttons">
             <label for="input-slide-1" class="label-input-service-buttons label-input-button-active"
               tabindex="0">Доставка</label>
@@ -230,28 +229,26 @@
             <label for="input-slide-3" class="label-input-service-buttons" tabindex="0">Кредит</label>
           </div>
           <div class="slider-innerr">
-            <div class="wrapper-button-description">
-              <div class="label-description label-description-1">
-                <h3 class="description-title">ДОСТАВКА</h3>
-                <p class="description-subtitle">Мы с удовольствием доставим ваш товар прямо<br>
-                  к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш этаж!</p>
-              </div>
-              <div class="label-description label-description-2">
-                <h3 class="description-title">ГАРАНТИЯ</h3>
-                <p class="description-subtitle">Если купленный у нас товар поломается или заискрит,<br>
-                  а также в случае пожара, спровоцированного его возгоранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.<br>
-                  Дом уж восстановите как-нибудь сами.</p>
-              </div>
-              <div class="label-description label-description-3">
-                <h3 class="description-title">КРЕДИТ</h3>
-                <p class="description-subtitle">Залезть в долговую яму стало проще!<br>
-                  Кредитные консультанты придут вам на помощь.</p>
-                <a class="send-request" href="#" tabindex="-1">ОТПРАВИТЬ ЗАЯВКУ</a>
-              </div>
+            <div class="label-description label-description-1">
+              <h3 class="description-title">ДОСТАВКА</h3>
+              <p class="description-subtitle">Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!</p>
+            </div>
+            <div class="label-description label-description-2">
+              <h3 class="description-title">ГАРАНТИЯ</h3>
+              <p class="description-subtitle">Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.</p>
+            </div>
+            <div class="label-description label-description-3">
+              <h3 class="description-title">КРЕДИТ</h3>
+              <p class="description-subtitle">Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.</p>
+              <a class="send-request" href="#" tabindex="-1">ОТПРАВИТЬ ЗАЯВКУ</a>
             </div>
           </div>
         </div>
@@ -285,10 +282,10 @@
     </section>
   </main>
 
-  <h2 class="visually-hidden">Шапка подвала</h2>
   <footer>
     <div class="footer-top-strip">
       <section class="footer-top">
+        <h2 class="visually-hidden">Шапка подвала</h2>
         <div class="wrapper-for-logo-and-address">
           <img class="wrapper-for-top-menu-img" src="img/index/technomart-footer.jpg" alt="Логотип" width="220"
             height="68">
@@ -315,8 +312,8 @@
       </section>
     </div>
 
-    <h2 class="visually-hidden">Подвал</h2>
     <div class="footer-bottom-strip">
+      <h2 class="visually-hidden">Подвал</h2>
       <section class="footer-bottom">
         <div class="wrapper-company-text">
           <p class="company-text">© 2010–2019 Компания «Техномарт»
@@ -369,7 +366,7 @@
 
   <!--Форма обратной связи-->
 
-  <section class="wrapper-form">
+  <section class="wrapper-form wrapper-form-active">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="user-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="wrapper-login">
@@ -382,13 +379,12 @@
       </div>
       <div class="wrapper-text">
         <label for="user-text">Текст письма:</label>
-        <textarea class="user-message" id="user-text" name="text" cols="111" rows="6"
-          placeholder="В свободной форме"></textarea>
+        <textarea class="user-message" id="user-text" name="text" placeholder="В свободной форме"></textarea>
       </div>
       <div class="wrapper-button-send">
         <button class="button-send" type="submit">Отправить</button>
       </div>
-      <button class="modal-close" type="submit">
+      <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </form>
@@ -410,10 +406,8 @@
   <!--Товар добавлен в корзину-->
 
   <section class="popup-basket">
-
+    <h2 class="visually-hidden">Ваш товар добавлен в корзину</h2>
     <div class="wrapper-goods-in-basket">
-      <img class="goods-in-bascet-image" src="img/svg-technomart/form-1.png" alt="Товар добавлен в корзину" width="66"
-        height="66">
       <p class="goods-in-basket">Товар добавлен в корзину!</p>
     </div>
     <div class="wrapper-basket-buttons">

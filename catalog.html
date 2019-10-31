@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext"
+    rel="stylesheet" type="text/css">
   <link href="css/normalize.css" type="text/css" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -32,7 +35,7 @@
             <a class="header-menu-link" href="#">Закладки: 0</a>
           </li>
           <li>
-            <a class="header-menu-link-2" href="#">Корзина: 0</a>
+            <a class="header-menu-link-2 catalog-header-menu-link-2" href="#">Корзина: 10</a>
           </li>
           <li>
             <a class="header-menu-order" href="#">Оформить заказ</a>
@@ -43,23 +46,26 @@
     <section class="header-center">
       <div class="information">
         <div class="wrapper-shop-description">
-          <!--Не получается отступами отрегулировать что бы буква "и" переходила на следующую строчку, и при этом слово "ремонта" оставалось в третьей строчке. Поэтому пришлось использовать три тега "р". Потому что <br> нельзя использовать в этом месте -->
-          <p>Интернет-магазин</p>
-          <p>строительных материалов</p>
-          <p>и инструментов для ремонта</p>
+          <p>Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта</p>
         </div>
         <div class="contacts">
           <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная,д.19/8</address>
         </div>
         <div class="catalog-buttons">
-          <a class="button-user" href="#">
+          <a class="button-user" href="https://htmlacademy.ru/profile/stanislavtyutrin">
             <svg class="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
               <path fill="#c5c5c5"
                 d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
             </svg>
             Равшан Джамшутович
-            <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+          </a>
+          <a class="button-logout"
+            href="https://htmlacademy.ru/logout?redirect_url=https://htmlacademy.ru/profile/stanislavtyutrin">
+            <svg class="icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"
+              aria-label="Выход из личного кабинета">
               <g fill="#c5c5c5">
                 <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
                 <path fill="#c5c5c5"
@@ -90,7 +96,7 @@
     <h1 class="visually-hidden">Каталог</h1>
     <div class="wrapper-breadcrumbs">
       <ul class="breadcrumbs-list">
-        <li class="list-item"><a href="index.html"></a></li>
+        <li class="list-item"><a href="index.html" aria-label="На главную страницу"></a></li>
         <li class="list-item"><a href="#">Каталог</a></li>
         <li class="list-item"><a href="#">Инструмент</a></li>
         <li class="list-item">Перфораторы</li>
@@ -102,9 +108,8 @@
 
     <div class="wrapper-filter-product-cards">
       <section class="filter">
-        <h2 class="visually-hidden">Фильтр</h2>
         <div class="wrapper-title">
-          <h3 class="filter-title">ФИЛЬТР:</h3>
+          <h2 class="filter-title">ФИЛЬТР:</h2>
         </div>
         <form method="get">
           <fieldset class="filter-item">
@@ -131,72 +136,66 @@
         <form method="get">
           <fieldset class="manufacturers-filter-item">
             <legend>ПРОИЗВОДИТЕЛИ:</legend>
-            <div class="manufacturers-range-filter">
-              <div class="wrapper-input-label">
-                <input id="input-1" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
-                <input id="input-2" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
-                <input id="input-3" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
-                <input id="input-4" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
-                <input id="input-5" class="manufacturers-list-input visually-hidden" type="checkbox" name="checkbox">
-                <div class="wrapper-label">
-                  <label for="input-1"></label>
-                  <label for="input-2"></label>
-                  <label for="input-3"></label>
-                  <label for="input-4"></label>
-                  <label for="input-5"></label>
-                </div>
-                <ul class="manufacturers-list">
-                  <li>BOSCH</li>
-                  <li>ИНТЕРСКОЛ</li>
-                  <li>MAKITA</li>
-                  <li>DEWALT</li>
-                  <li>HITACHI</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="wrapper-input-label">
+              <li class="filter-option">
+                <input id="input-1" class="manufacturers-list-input visually-hidden" type="checkbox" name="bosch"
+                  checked>
+                <label for="input-1">BOSCH</label>
+              </li>
+              <li class="filter-option">
+                <input id="input-2" class="manufacturers-list-input visually-hidden" type="checkbox" name="interscol">
+                <label for="input-2">ИНТЕРСКОЛ</label>
+              </li>
+              <li class="filter-option">
+                <input id="input-3" class="manufacturers-list-input visually-hidden" type="checkbox" name="makita"
+                  checked>
+                <label for="input-3">MAKITA</label>
+              </li>
+              <li class="filter-option">
+                <input id="input-4" class="manufacturers-list-input visually-hidden" type="checkbox" name="dewalt">
+                <label for="input-4">DEWALT</label>
+              </li>
+              <li class="filter-option">
+                <input id="input-5" class="manufacturers-list-input visually-hidden" type="checkbox" name="hitachi">
+                <label for="input-5">HITACHI</label>
+              </li>
+            </ul>
           </fieldset>
         </form>
         <form method="get">
           <fieldset class="food-filter-item">
             <legend>ПИТАНИЕ:</legend>
-            <div class="food-range-filter">
-              <div class="wrapper-food-input-label">
-                <input id="food-input-1" class="food-list-input visually-hidden" type="radio" name="radio" checked>
-                <input id="food-input-2" class="food-list-input visually-hidden" type="radio" name="radio">
-                <div class="wrapper-food-label">
-                  <label for="food-input-1"></label>
-                  <label for="food-input-2"></label>
-                </div>
-                <ul class="food-list">
-                  <li>Аккумуляторные</li>
-                  <li>Сетевые</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="food-range-filter">
+              <li class="food-filter-option">
+                <input id="food-input-1" class="food-list-input visually-hidden" type="radio" name="radio"
+                  value="rechargeable" checked>
+                <label for="food-input-1">Аккумуляторные</label>
+              </li>
+              <li class="food-filter-option">
+                <input id="food-input-2" class="food-list-input visually-hidden" type="radio" name="radio"
+                  value="network">
+                <label for="food-input-2">Сетевые</label>
+              </li>
+            </ul>
           </fieldset>
+          <button class="button-show" type="submit">ПОКАЗАТЬ</button>
         </form>
-        <button class="button-show" type="submit">ПОКАЗАТЬ</button>
       </section>
 
-      <h2 class="visually-hidden">Карточки товаров</h2>
       <section class="catalog-cards-product">
-        <form class="sort-line">
+        <h2 class="visually-hidden">Карточки товаров</h2>
+        <div class="sort-line">
           <h3>СОРТИРОВКА:</h3>
-          <input id="sort-price" class="sort-input visually-hidden" type="radio" name="radio" checked>
-          <input id="sort-type" class="sort-input visually-hidden" type="radio" name="radio">
-          <input id="sort-functional" class="sort-input visually-hidden" type="radio" name="radio">
-          <div class="sort-line-list">
-            <label for="sort-price">ПО ЦЕНЕ</label>
-            <label for="sort-type">ПО ТИПУ</label>
-            <label for="sort-functional">ПО ФУНКЦИОНАЛУ</label>
+          <div class="wrapper-for-sort-of-sign">
+            <a class="sort-of-price" href="#">ПО ЦЕНЕ</a>
+            <a class="sort-of-type" href="#">ПО ТИПУ</a>
+            <a class="sort-of-functional" href="#">ПО ФУНКЦИОНАЛУ</a>
           </div>
-          <div class="wrapper-svg">
-            <input id="sort-up" class="sort-input visually-hidden" type="radio" name="radio">
-            <input id="sort-down" class="sort-input visually-hidden" type="radio" name="radio">
-            <label for="sort-up"></label>
-            <label for="sort-down"></label>
+          <div class="wrapper-for-sort-of-rotation">
+            <a class="sort-up" href="#"></a>
+            <a class="sort-down" href="#"></a>
           </div>
-        </form>
+        </div>
         <div class="wrapper-card-product">
           <article class="card-product" tabindex="0">
             <div class="flag">новинка</div>
@@ -308,43 +307,40 @@
           </article>
           <h3 class="visually-hidden">Кнопки перелистывания страниц</h3>
           <div class="wrapper-label-input">
-            <form>
-              <input id="input-one" class="page-catalog-input visually-hidden" type="radio" name="radio" checked>
-              <input id="input-two" class="page-catalog-input visually-hidden" type="radio" name="radio">
-              <input id="input-three" class="page-catalog-input visually-hidden" type="radio" name="radio">
-              <input id="input-next" class="page-catalog-input visually-hidden" type="radio" name="radio">
-              <div class="wrapper-page-label">
-                <label class="page-catalog-label" for="input-one">1</label>
-                <label class="page-catalog-label" for="input-two">2</label>
-                <label class="page-catalog-label" for="input-three">3</label>
-                <label class="page-catalog-label-next" for="input-next">Следующая</label>
-              </div>
-            </form>
+            <div class="wrapper-page-label">
+              <a href="#" class="page-catalog-label current">1</a>
+              <a href="#" class="page-catalog-label">2</a>
+              <a href="#" class="page-catalog-label">3</a>
+              <a href="#" class="page-catalog-label-next">Следующая</a>
+            </div>
           </div>
         </div>
       </section>
     </div>
     <div class="wrapper-perforator-description">
       <section class="perforator-description">
-        <h2 class="visually-hidden">Описание предназначения перфоратора</h2>
         <h2 class="catalog-popular-title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p class="catalog-popular-description">Перфоратор — универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+          дрели,
           шуруповерта и отбойного молотка. В
-          ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
+          ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+          ударная
           дрель.</p>
       </section>
     </div>
   </main>
 
-  <h2 class="visually-hidden">Шапка подвала</h2>
   <footer>
     <div class="footer-top-strip">
+      <h2 class="visually-hidden">Шапка подвала</h2>
       <section class="footer-top">
         <div class="wrapper-for-logo-and-address">
-          <img class="wrapper-for-top-menu-img" src="img/index/technomart-footer.jpg" alt="Логотип" width="220"
-            height="68">
+          <a href="index.html">
+            <img class="wrapper-for-top-menu-img" src="img/index/technomart-footer.jpg" alt="Логотип" width="220"
+              height="68">
+          </a>
           <div class="wrapper-for-address">
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -368,8 +364,8 @@
       </section>
     </div>
 
-    <h2 class="visually-hidden">Подвал</h2>
     <div class="footer-bottom-strip">
+      <h2 class="visually-hidden">Подвал</h2>
       <section class="footer-bottom">
         <div class="wrapper-company-text">
           <p class="company-text">© 2010–2019 Компания «Техномарт»
@@ -440,7 +436,7 @@
       <div class="wrapper-button-send">
         <button class="button-send" type="submit">Отправить</button>
       </div>
-      <button class="modal-close" type="submit">
+      <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </form>
@@ -462,10 +458,8 @@
   <!--Товар добавлен в корзину-->
 
   <section class="popup-basket">
-
+    <h2 class="visually-hidden">Ваш товар добавлен в корзину</h2>
     <div class="wrapper-goods-in-basket">
-      <img class="goods-in-bascet-image" src="img/svg-technomart/form-1.png" alt="Товар добавлен в корзину" width="66"
-        height="66">
       <p class="goods-in-basket">Товар добавлен в корзину!</p>
     </div>
     <div class="wrapper-basket-buttons">
