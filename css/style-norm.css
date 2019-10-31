@@ -665,6 +665,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
   margin-top: 21px;
   margin-left: 23px;
+  padding-right: 50px;
 }
 
 .promo-btn { /*Ссылки на блоках промо*/
@@ -2692,7 +2693,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .manufacturers-list-input:disabled + label::before { /*catalog.html*/
-  background-image: url(../img/svg-technomart/checkbox-off-grey.svg);
+  opacity: 0.3;
+
+  background-image: url(../img/svg-technomart/checkbox-off-grey-black.svg);
 }
 
 .manufacturers-list-input + label::after { /*catalog.html*/
@@ -2717,7 +2720,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .manufacturers-list-input:disabled + label::after { /*catalog.html*/
-  background-image: url(../img/svg-technomart/checkbox-on-grey.svg);
+  opacity: 0.3;
+
+  background-image: url(../img/svg-technomart/checkbox-on-grey-black.svg);
+}
+
+.manufacturers-list-input:disabled + label { /*catalog.html*/
+  opacity: 0.3;
 }
 
 
@@ -2817,15 +2826,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .food-list-input:disabled + label::before {
-  background-image: url(../img/svg-technomart/radio-off-disabled.svg);
+  background-image: url(../img/svg-technomart/radio-off-hover.svg);
 }
 
 .food-list-input:hover + label::after {
+  opacity: 0.3;
+  
   background-image: url(../img/svg-technomart/radio-on-hover.svg);
 }
 
 .food-list-input:disabled + label::after {
-  background-image: url(../img/svg-technomart/radio-on-disabled.svg);
+  opacity: 0.3;
+  
+  background-image: url(../img/svg-technomart/radio-on-hover.svg);
 }
 
 .food-list-input:checked ~ label::before {
@@ -2834,6 +2847,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .food-list-input:checked ~ label::after {
   display: block;
+}
+
+.food-list-input:disabled + label {
+  opacity: 0.3;
 }
 
                             /*Фильтр типа питания*/
@@ -3544,9 +3561,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   outline: 0;
 }
 
-                            /*Товар добавлен в корзину*/
 .modal-show {
   display: block;
+}
+
+                            /*Товар добавлен в корзину*/
+
+.modal-error { /*класс ошибки анимации*/
+  animation: shake 0.6s;
 }
 
 @-webkit-keyframes fadeInDown { 
@@ -3562,7 +3584,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
             }
 }
 
-@keyframes fadeInDown { 
+@keyframes fadeInDown { /* анимация открытия*/
   0% {               
   opacity: 0;
   -webkit-transform: translate3d(0px, -100%, 0px);
@@ -3573,4 +3595,26 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -webkit-transform: none;
           transform: none;
             }
+}
+
+@keyframes shake { /*анимация ошибки*/
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

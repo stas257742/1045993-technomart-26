@@ -71,12 +71,17 @@ link.addEventListener("click", function (evt) { // поймали событие
 close.addEventListener("click", function (evt) { // поймали событие клика по кнопке "Закрыть";
   evt.preventDefault(); // отменили стандартное действие браузера;
   popup.classList.remove("modal-show"); // убрали у попапа класс "modal-show";
+  popup.classList.remove("modal-error");
+
 })
 
 form.addEventListener("submit", function (evt) { // поймали событие отправки формы;
   evt.preventDefault(); //отменили стандартное дествие браузера;
   if (!login.value || !email.value || !text.value) { // если хоть одно поле не заполнено, то отменяем отправку формы;
     evt.preventDefault(); //отменяем отправку формы;
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
     console.log("Пожалуйста, заполните поля формы") // и выводим сообщение о необходимости заполнить все поле формы;
   } else { // если все поля формы заполнены, то происходит отправка формы;
     if (isStorageSupport) {
@@ -89,6 +94,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
     }
   }
 })
